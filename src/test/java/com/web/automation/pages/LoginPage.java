@@ -20,9 +20,6 @@ public class LoginPage {
 	@FindBy(linkText = "Login")
 	private WebElement loginOption;
 	
-	@FindBy(linkText = "Register")
-	private WebElement registerOption;
-	
 	@FindBy(id = "input-email")
 	private WebElement emailAddress;
 	
@@ -40,15 +37,11 @@ public class LoginPage {
 	
 	public WebElement myAccountElement() {
 		return myAccount;
+		//return new RegisterPage(driver);
 	}
 	
-	public void SelectingOption(String option) {
-		if(option.equalsIgnoreCase("Login")) {
-			loginOption.click();
-		}
-		else if(option.equalsIgnoreCase("register")) {
-			registerOption.click();
-		}
+	public WebElement loginOptionElement() {
+		return loginOption;
 	}
 	
 	public WebElement emailAddressElement() {
