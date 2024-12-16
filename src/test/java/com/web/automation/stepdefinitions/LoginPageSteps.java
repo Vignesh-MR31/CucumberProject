@@ -16,6 +16,7 @@ import junit.framework.Assert;
 
 public class LoginPageSteps {
 	
+<<<<<<< HEAD
 	private WebDriver driver;
 	LoginPage loginPage;
 	RegisterPage registerPage;
@@ -23,12 +24,35 @@ public class LoginPageSteps {
 	@Given("User open the application using the URL")
 	public void userOpenTheApplicationUsingTheURL() {
 		driver = Base.getDriver();
+=======
+	WebDriver driver;
+	LoginPage loginPage;
+	RegisterPage registerPage;
+	
+	@Before
+	public void setup() {
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+	}
+	
+	@After
+	public void tearDown() {
+		driver.quit();
+	}
+	
+	@Given("User open the application using the URL")
+	public void userOpenTheApplicationUsingTheURL() {
+		driver.get("https://tutorialsninja.com/demo");
+>>>>>>> 0dab827540aafca19fbda653044c1f21d7fcab7a
 	}
 	
 	@When("User clicks the My Account dropdown")
 	public void userClicksTheMyAccountDropdown() {
 		loginPage = new LoginPage(driver);
+<<<<<<< HEAD
 		loginPage.myAccountElement().click();
+=======
+>>>>>>> 0dab827540aafca19fbda653044c1f21d7fcab7a
 		registerPage = new RegisterPage(driver);
 	}
 	
