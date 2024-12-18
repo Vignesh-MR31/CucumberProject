@@ -7,7 +7,15 @@ import org.openqa.selenium.support.PageFactory;
 
 public class RegisterPage {
 
+<<<<<<< HEAD
 	private WebDriver driver;
+=======
+<<<<<<< HEAD
+	private WebDriver driver;
+=======
+	WebDriver driver;
+>>>>>>> main
+>>>>>>> main
 	
 	public RegisterPage(WebDriver driver) {
 		this.driver = driver;
@@ -20,6 +28,7 @@ public class RegisterPage {
 	@FindBy(xpath = "//div[@id='content']/h1")
 	private WebElement registerAccountHeader;
 	
+<<<<<<< HEAD
 	@FindBy(id = "input-firstname")
 	private WebElement firstNameTextBox;
 	
@@ -53,6 +62,8 @@ public class RegisterPage {
 	@FindBy(xpath = "//div[@id='content']//h1")
 	private WebElement accountCreatedHeader;
 	
+=======
+>>>>>>> main
 	public WebElement registerOptionElement() {
 		return registerOption;
 	}
@@ -60,6 +71,7 @@ public class RegisterPage {
 	public WebElement registerAccountHeaderWebElement() {
 		return registerAccountHeader;
 	}
+<<<<<<< HEAD
 	
 	public WebElement firstNameTextBoxWebElement() {
 		return firstNameTextBox;
@@ -104,4 +116,6 @@ public class RegisterPage {
 	public WebElement accountCreatedHeaderWebElement() {
 		return accountCreatedHeader;
 	}
+=======
+>>>>>>> main
 }

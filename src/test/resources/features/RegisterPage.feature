@@ -5,6 +5,7 @@ Scenario: Navigating to Register Page
 Given User open the application using the URL
 When User clicks the My Account dropdown
 When User select Register from the dropdown
+<<<<<<< HEAD
 Then User successfully navigated to Register Page
 
 @TC_RP_002
@@ -19,3 +20,6 @@ When User selects subscribe radio button as "yes"
 When User selects privacy policy checkbox
 When User clicks continue button
 Then User verify the account is successfully registered
+=======
+Then User successfully navigated to Register Page
+>>>>>>> main

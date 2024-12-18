@@ -2,9 +2,19 @@ package com.web.automation.stepdefinitions;
 
 import org.openqa.selenium.WebDriver;
 
+<<<<<<< HEAD
 import com.web.automation.base.TestContext;
 import com.web.automation.pages.LandingPage;
+=======
+<<<<<<< HEAD
+import com.web.automation.base.TestContext;
+import com.web.automation.pages.LandingPage;
+=======
+import com.web.automation.base.Base;
+>>>>>>> main
+>>>>>>> main
 import com.web.automation.pages.LoginPage;
+import com.web.automation.pages.RegisterPage;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,25 +23,62 @@ import org.junit.Assert;
 
 public class LoginPageSteps {
 	
+<<<<<<< HEAD
 	private WebDriver driver;
 	LoginPage loginPage;
 	LandingPage landingPage;
 	
+=======
+<<<<<<< HEAD
+	private WebDriver driver;
+	LoginPage loginPage;
+	LandingPage landingPage;
+=======
+<<<<<<< HEAD
+	private WebDriver driver;
+	LoginPage loginPage;
+	RegisterPage registerPage;
+	
+	@Given("User open the application using the URL")
+	public void userOpenTheApplicationUsingTheURL() {
+		driver = Base.getDriver();
+=======
+	WebDriver driver;
+	LoginPage loginPage;
+	RegisterPage registerPage;
+>>>>>>> main
+	
+>>>>>>> main
 	public LoginPageSteps(TestContext context) {
 		driver = context.driver;
 	}
 	
 	@Given("User open the application using the URL")
 	public void userOpenTheApplicationUsingTheURL() {
+<<<<<<< HEAD
 		landingPage = new LandingPage(driver);
 		String expectedFeaturedHeader = "Featured";
 		Assert.assertEquals(expectedFeaturedHeader, landingPage.featuredHeaderElement().getText());
+=======
+<<<<<<< HEAD
+		landingPage = new LandingPage(driver);
+		String expectedFeaturedHeader = "Featured";
+		Assert.assertEquals(expectedFeaturedHeader, landingPage.featuredHeaderElement().getText());
+=======
+		driver.get("https://tutorialsninja.com/demo");
+>>>>>>> 0dab827540aafca19fbda653044c1f21d7fcab7a
+>>>>>>> main
+>>>>>>> main
 	}
 	
 	@When("User clicks the My Account dropdown")
 	public void userClicksTheMyAccountDropdown() {
 		loginPage = new LoginPage(driver);
+<<<<<<< HEAD
 		loginPage.myAccountElement().click();
+=======
+>>>>>>> 0dab827540aafca19fbda653044c1f21d7fcab7a
+		registerPage = new RegisterPage(driver);
 	}
 	
 	@When("User select Login from the dropdown")
