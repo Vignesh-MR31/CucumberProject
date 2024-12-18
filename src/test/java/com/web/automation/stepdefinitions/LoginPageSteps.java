@@ -1,78 +1,73 @@
 package com.web.automation.stepdefinitions;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.web.automation.base.TestContext;
+import com.web.automation.pages.LandingPage;
 import com.web.automation.pages.LoginPage;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import junit.framework.Assert;
+import org.junit.Assert;
 
 public class LoginPageSteps {
 	
-	public WebDriver driver;
+	private WebDriver driver;
 	LoginPage loginPage;
+	LandingPage landingPage;
 	
-	@Before
-	public void setup() {
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-	}
-	
-	@After
-	public void tearDown() {
-		driver.quit();
+	public LoginPageSteps(TestContext context) {
+		driver = context.driver;
 	}
 	
 	@Given("User open the application using the URL")
-	public void user_open_the_application_using_the_url() {
-		driver.get("https://tutorialsninja.com/demo");
+	public void userOpenTheApplicationUsingTheURL() {
+		landingPage = new LandingPage(driver);
+		String expectedFeaturedHeader = "Featured";
+		Assert.assertEquals(expectedFeaturedHeader, landingPage.featuredHeaderElement().getText());
 	}
 	
 	@When("User clicks the My Account dropdown")
-	public void user_clicks_the_my_account_dropdown() {
+	public void userClicksTheMyAccountDropdown() {
 		loginPage = new LoginPage(driver);
 		loginPage.myAccountElement().click();
 	}
 	
-	@When("User select {string} from the dropdown")
-	public void user_select_from_the_dropdown(String page) {
-		loginPage.SelectingOption(page);
+	@When("User select Login from the dropdown")
+	public void userSelectLoginFromTheDropdown() {
+		loginPage.loginOptionElement().click();
 	}
 	
 	@Then("User successfully navigated to Login Page")
-	public void user_successfully_navigated_to_login_page() {
+	public void userSuccessfullyNavigatedToLoginPage() {
 		String expectedTitle = "Account Login";
 		Assert.assertEquals(expectedTitle, driver.getTitle());
 	}
 
 	@When("User enters {string} email address")
-	public void user_enters_email_address(String email) {
+	public void userEntersEmailAddress(String email) {
 		loginPage.emailAddressElement().sendKeys(email);
 	}
 	
 	@When("User enters {string} password")
-	public void user_enters_password(String password) {
+	public void userEntersPassword(String password) {
 	    loginPage.passwordElement().sendKeys(password);
 	}
 	
 	@When("User clicks the Login button")
-	public void user_clicks_the_login_button() {
+	public void userClicksTheLoginButton() {
 		loginPage.loginButtonElement().click();
 	}
 	
 	@Then("User verify the My Account page is displayed")
-	public void user_verify_the_my_account_page_is_displayed() {
+	public void userVerifyTheMyAccountPageIsDisplayed() {
 	    String expectedHeader = "My Account";
 	    Assert.assertEquals(expectedHeader, loginPage.myAccountHeaderElement().getText());
 	}
 
 	@Then("User verify the warning message displayed")
-	public void user_verify_the_warning_message_displayed() {
+	public void userVerifyTheWarningMessageDisplayed() {
 	    String expectedWarningMessage = "Warning: No match for E-Mail Address and/or Password.";
 	    Assert.assertEquals(expectedWarningMessage, loginPage.warningMessageElement().getText());
 	}
