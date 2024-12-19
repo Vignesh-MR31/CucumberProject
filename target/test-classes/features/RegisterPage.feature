@@ -19,3 +19,13 @@ When User selects subscribe radio button as "yes"
 When User selects privacy policy checkbox
 When User clicks continue button
 Then User verify the account is successfully registered
+
+@TC_RP_003
+Scenario: Register the new user with empty fields
+Given User open the application using the URL
+When User clicks the My Account dropdown
+When User select Register from the dropdown
+When User clicks continue button
+Then User verify the warning messages displayed
+
+
