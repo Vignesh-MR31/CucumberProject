@@ -35,15 +35,8 @@ public class LoginPage {
 	@FindBy(xpath = "(//div[@id='account-login']/div)[1]")
 	private WebElement warningMessage;
 	
-<<<<<<< HEAD
 	public WebElement myAccountElement() {
 		return myAccount;
-		//return new RegisterPage(driver);
-=======
-	public RegisterPage myAccountElement() {
-		myAccount.click();
-		return new RegisterPage(driver);
->>>>>>> 0dab827540aafca19fbda653044c1f21d7fcab7a
 	}
 	
 	public WebElement loginOptionElement() {
