@@ -1,17 +1,49 @@
 package com.web.automation.stepdefinitions;
 
+<<<<<<< HEAD
 import java.util.List;
 import java.util.Map;
 
+=======
+<<<<<<< HEAD
+import java.util.List;
+import java.util.Map;
+
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 import com.web.automation.base.TestContext;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 import com.web.automation.pages.RegisterPage;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+<<<<<<< HEAD
+=======
+=======
+=======
+import org.openqa.selenium.WebDriver;
+
+<<<<<<< HEAD
+import com.web.automation.base.Base;
+=======
+>>>>>>> 0dab827540aafca19fbda653044c1f21d7fcab7a
+>>>>>>> main
+import com.web.automation.pages.RegisterPage;
+
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
 
 public class RegisterPageSteps {
 
@@ -25,6 +57,31 @@ public class RegisterPageSteps {
 	@When("User select Register from the dropdown")
 	public void userSelectRegisterFromTheDropdown() {
 		registerPage = new RegisterPage(driver);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+import junit.framework.Assert;
+
+public class RegisterPageSteps {
+
+<<<<<<< HEAD
+	private WebDriver driver;
+=======
+	WebDriver driver;
+>>>>>>> 0dab827540aafca19fbda653044c1f21d7fcab7a
+	RegisterPage registerPage;
+	
+	@When("User select Register from the dropdown")
+	public void userSelectRegisterFromTheDropdown() {
+<<<<<<< HEAD
+		driver = Base.getDriver();
+=======
+>>>>>>> 0dab827540aafca19fbda653044c1f21d7fcab7a
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
 		registerPage.registerOptionElement().click();
 	}
 
@@ -33,6 +90,10 @@ public class RegisterPageSteps {
 		String expectedHeader = "Register Account";
 		Assert.assertEquals(expectedHeader, registerPage.registerAccountHeaderWebElement().getText());
 	}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 	
 	@When("User enters the personal details and passwords")
 	public void userEntersThePersonalDetailsAndPasswords(DataTable dataTable) {
@@ -71,4 +132,9 @@ public class RegisterPageSteps {
 	    Assert.assertEquals(expectedAccountCreaterHeader,registerPage.accountCreatedHeaderWebElement().getText());
 	}
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main
+>>>>>>> main
 }

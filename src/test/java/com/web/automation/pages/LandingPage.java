@@ -1,6 +1,13 @@
 package com.web.automation.pages;
 
 import org.openqa.selenium.WebDriver;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -20,5 +27,18 @@ public class LandingPage {
 	public WebElement featuredHeaderElement() {
 		return featuredHeader;
 	}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+
+public class LandingPage {
+	
+	WebDriver driver;
+	
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
 
 }
