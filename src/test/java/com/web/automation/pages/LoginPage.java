@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 	
-	WebDriver driver;
+	private WebDriver driver;
 	
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
@@ -19,9 +19,6 @@ public class LoginPage {
 	
 	@FindBy(linkText = "Login")
 	private WebElement loginOption;
-	
-	@FindBy(linkText = "Register")
-	private WebElement registerOption;
 	
 	@FindBy(id = "input-email")
 	private WebElement emailAddress;
@@ -42,13 +39,8 @@ public class LoginPage {
 		return myAccount;
 	}
 	
-	public void SelectingOption(String option) {
-		if(option.equalsIgnoreCase("Login")) {
-			loginOption.click();
-		}
-		else if(option.equalsIgnoreCase("register")) {
-			registerOption.click();
-		}
+	public WebElement loginOptionElement() {
+		return loginOption;
 	}
 	
 	public WebElement emailAddressElement() {
