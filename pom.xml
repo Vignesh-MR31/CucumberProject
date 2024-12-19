@@ -18,28 +18,11 @@
 	</properties>
 
 	<dependencies>
-<<<<<<< HEAD
-		<!--https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-=======
-<<<<<<< HEAD
-		<dependency>
-			<groupId>ddfp</groupId>
-			<artifactId>DDFProj</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 0dab827540aafca19fbda653044c1f21d7fcab7a
-		<!--
-		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
->>>>>>> main
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>4.20.0</version>
 		</dependency>
->>>>>>> master
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
@@ -59,8 +42,6 @@
 			<artifactId>cucumber-core</artifactId>
 			<version>7.20.1</version>
 		</dependency>
-<<<<<<< HEAD
-=======
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -68,47 +49,13 @@
 			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> main
 		<!--
 		https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-picocontainer</artifactId>
 			<version>7.20.1</version>
-<<<<<<< HEAD
 		</dependency>
-=======
-<<<<<<< HEAD
-		</dependency>
-=======
-=======
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-picocontainer</artifactId>
-			<version>1.2.3</version>
-			<scope>test</scope>
->>>>>>> main
-		</dependency>
-		<dependency>
-			<groupId>ddfp</groupId>
-			<artifactId>DDFProj</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> master
->>>>>>> 0dab827540aafca19fbda653044c1f21d7fcab7a
->>>>>>> main
->>>>>>> main
->>>>>>> main
 	</dependencies>
 
 	<build>
