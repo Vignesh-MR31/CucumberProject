@@ -70,5 +70,21 @@ public class RegisterPageSteps {
 	    String expectedAccountCreaterHeader = "Your Account Has Been Created!";
 	    Assert.assertEquals(expectedAccountCreaterHeader,registerPage.accountCreatedHeaderWebElement().getText());
 	}
+	
+	@Then("User verify the warning messages displayed in fields")
+	public void userVerifyTheWarningMessagesDisplayedInFields() {
+	    String firstNameWarning = "First Name must be between 1 and 32 characters!";
+	    String lastNameWarning = "Last Name must be between 1 and 32 characters!";
+	    String emailWarning = "E-Mail Address does not appear to be valid!";
+	    String telephoneWarning = "Telephone must be between 3 and 32 characters!";
+	    String passwordWarning = "Password must be between 4 and 20 characters!";
+	    String privacyPolicyWarning = "Warning: You must agree to the Privacy Policy!";
+	    Assert.assertEquals(firstNameWarning,registerPage.firstNameWarningWebElement().getText());
+	    Assert.assertEquals(lastNameWarning,registerPage.lasttNameWarningWebElement().getText());
+	    Assert.assertEquals(emailWarning,registerPage.emailWarningWebElement().getText());
+	    Assert.assertEquals(telephoneWarning,registerPage.telephoneWarningWebElement().getText());
+	    Assert.assertEquals(passwordWarning,registerPage.passwordWarningWebElement().getText());
+	    Assert.assertEquals(privacyPolicyWarning,registerPage.privacyPolicyWarningWebElement().getText());
+	}
 
 }

@@ -53,6 +53,25 @@ public class RegisterPage {
 	@FindBy(xpath = "//div[@id='content']//h1")
 	private WebElement accountCreatedHeader;
 	
+	@FindBy(xpath = "(//div[@id='account-register']//div)[1]")
+	private WebElement privacyPolicyWarning;
+	
+	@FindBy(xpath = "(//div[@class='text-danger'])[1]")
+	private WebElement firstNameWarning;
+	
+	@FindBy(xpath = "(//div[@class='text-danger'])[2]")
+	private WebElement lastNameWarning;
+	
+	@FindBy(xpath = "(//div[@class='text-danger'])[3]")
+	private WebElement emailWarning;
+	
+	@FindBy(xpath = "(//div[@class='text-danger'])[4]")
+	private WebElement telephoneWarning;
+	
+	@FindBy(xpath = "(//div[@class='text-danger'])[5]")
+	private WebElement passwordWarning;
+
+	
 	public WebElement registerOptionElement() {
 		return registerOption;
 	}
@@ -103,5 +122,29 @@ public class RegisterPage {
 	
 	public WebElement accountCreatedHeaderWebElement() {
 		return accountCreatedHeader;
+	}
+	
+	public WebElement privacyPolicyWarningWebElement() {
+		return privacyPolicyWarning;
+	}
+	
+	public WebElement firstNameWarningWebElement() {
+		return firstNameWarning;
+	}
+	
+	public WebElement lasttNameWarningWebElement() {
+		return lastNameWarning;
+	}
+	
+	public WebElement emailWarningWebElement() {
+		return emailWarning;
+	}
+	
+	public WebElement telephoneWarningWebElement() {
+		return telephoneWarning;
+	}
+	
+	public WebElement passwordWarningWebElement() {
+		return passwordWarning;
 	}
 }
