@@ -6,6 +6,7 @@ import com.web.automation.utils.PropertyLoader;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 
 public class Hooks {
 	private WebDriver driver;
@@ -24,7 +25,10 @@ public class Hooks {
 	}
 
 	@After
-	public void tearDown() {
+	public void tearDown(Scenario scenario) {
+		if(scenario.isFailed()) {
+			Base.takesScreenshot(scenario.getName());
+		}
 		driver.quit();
 	}
 }
