@@ -1,0 +1,573 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Dec 31, 2024 06:37:56 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@TC_RP_001</a><a class="dropdown-item" href="#">@TC_RP_003</a><a class="dropdown-item" href="#">@TC_LP_003</a><a class="dropdown-item" href="#">@TC_LP_005</a><a class="dropdown-item" href="#">@TC_RP_002</a><a class="dropdown-item" href="#">@TC_LP_004</a><a class="dropdown-item" href="#">@Login</a><a class="dropdown-item" href="#">@TC_LP_002</a><a class="dropdown-item" href="#">@Register</a><a class="dropdown-item" href="#">@TC_LP_001</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Login Page</p>
+            <p class="text-sm">
+              <span>6:37:57 pm</span> / <span>00:00:26:661</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Login Page</h5>
+<span class='badge badge-success'>12.31.2024 6:37:57 pm</span>
+<span class='badge badge-danger'>12.31.2024 6:38:23 pm</span>
+<span class='badge badge-default'>00:00:26:661</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Navigating to Login Page</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userOpenTheApplicationUsingTheURL()">
+                <span>Given User open the application using the URL</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userClicksTheMyAccountDropdown()">
+                <span>When User clicks the My Account dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userSelectLoginFromTheDropdown()">
+                <span>When User select Login from the dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userSuccessfullyNavigatedToLoginPage()">
+                <span>Then User successfully navigated to Login Page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Login with valid credentials</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userOpenTheApplicationUsingTheURL()">
+                <span>Given User open the application using the URL</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userClicksTheMyAccountDropdown()">
+                <span>When User clicks the My Account dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userSelectLoginFromTheDropdown()">
+                <span>When User select Login from the dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userEntersEmailAddress(java.lang.String)">
+                <span>When User enters "Vickymr@gmail.com" email address</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userEntersPassword(java.lang.String)">
+                <span>When User enters "12345678" password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userClicksTheLoginButton()">
+                <span>And User clicks the Login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userVerifyTheMyAccountPageIsDisplayed()">
+                <span>Then User verify the My Account page is displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="19"><span class="badge log pass-bg mr-2">Pass</span>Login with valid email and invalid password</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userOpenTheApplicationUsingTheURL()">
+                <span>Given User open the application using the URL</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userClicksTheMyAccountDropdown()">
+                <span>When User clicks the My Account dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userSelectLoginFromTheDropdown()">
+                <span>When User select Login from the dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userEntersEmailAddress(java.lang.String)">
+                <span>When User enters "Vickymr@gmail.com" email address</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userEntersPassword(java.lang.String)">
+                <span>When User enters "123456789" password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userClicksTheLoginButton()">
+                <span>And User clicks the Login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userVerifyTheWarningMessageDisplayed()">
+                <span>Then User verify the warning message displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="29"><span class="badge log pass-bg mr-2">Pass</span>Login with invalid email and valid password</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userOpenTheApplicationUsingTheURL()">
+                <span>Given User open the application using the URL</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userClicksTheMyAccountDropdown()">
+                <span>When User clicks the My Account dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userSelectLoginFromTheDropdown()">
+                <span>When User select Login from the dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userEntersEmailAddress(java.lang.String)">
+                <span>When User enters "Vickymrs@gmail.com" email address</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userEntersPassword(java.lang.String)">
+                <span>When User enters "12345678" password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userClicksTheLoginButton()">
+                <span>And User clicks the Login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userVerifyTheWarningMessageDisplayed()">
+                <span>Then User verify the warning message displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="39"><span class="badge log pass-bg mr-2">Pass</span>Login with invalid email and invalid password</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userOpenTheApplicationUsingTheURL()">
+                <span>Given User open the application using the URL</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userClicksTheMyAccountDropdown()">
+                <span>When User clicks the My Account dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userSelectLoginFromTheDropdown()">
+                <span>When User select Login from the dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userEntersEmailAddress(java.lang.String)">
+                <span>When User enters "Vickymrs@gmail.com" email address</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userEntersPassword(java.lang.String)">
+                <span>When User enters "123456789" password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userClicksTheLoginButton()">
+                <span>And User clicks the Login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userVerifyTheWarningMessageDisplayed()">
+                <span>Then User verify the warning message displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="49"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Register Page</p>
+            <p class="text-sm">
+              <span>6:38:23 pm</span> / <span>00:00:16:330</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Register Page</h5>
+<span class='badge badge-success'>12.31.2024 6:38:23 pm</span>
+<span class='badge badge-danger'>12.31.2024 6:38:40 pm</span>
+<span class='badge badge-default'>00:00:16:330</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=49</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="50"><span class="badge log pass-bg mr-2">Pass</span>Navigating to Register Page</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userOpenTheApplicationUsingTheURL()">
+                <span>Given User open the application using the URL</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userClicksTheMyAccountDropdown()">
+                <span>When User clicks the My Account dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userSelectRegisterFromTheDropdown()">
+                <span>When User select Register from the dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userSuccessfullyNavigatedToRegisterPage()">
+                <span>Then User successfully navigated to Register Page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="57"><span class="badge log fail-bg mr-2">Fail</span>Register the new user</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userOpenTheApplicationUsingTheURL()">
+                <span>Given User open the application using the URL</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userClicksTheMyAccountDropdown()">
+                <span>When User clicks the My Account dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userSelectRegisterFromTheDropdown()">
+                <span>When User select Register from the dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userEntersThePersonalDetailsAndPasswords(io.cucumber.datatable.DataTable)">
+                <span>When User enters the personal details and passwords</span>
+      <div><table class='markup-table table '><tr><td>firstName</td><td>lastName</td><td>email</td><td>telephone</td><td>password</td><td>passwordConfirm</td></tr><tr><td>vicky</td><td>M R</td><td>vicky@1gmail.com</td><td>1234567890</td><td>1234567</td><td>1234567</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userSelectsSubscribeRadioButtonAs(java.lang.String)">
+                <span>When User selects subscribe radio button as "yes"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userSelectsPrivacyPolicyCheckbox()">
+                <span>When User selects privacy policy checkbox</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userClicksContinueButton()">
+                <span>When User clicks continue button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userVerifyTheAccountIsSuccessfullyRegistered()">
+                <span>Then User verify the account is successfully registered</span>
+      <div>
+        <textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[Your Account Has Been Created!]> but was:<[Register Account]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.web.automation.stepdefinitions.RegisterPageSteps.userVerifyTheAccountIsSuccessfullyRegistered(RegisterPageSteps.java:72)
+	at ✽.User verify the account is successfully registered(file:///D:/Learning-Automation-New-Java/CucumberAutomationProject/src/test/resources/features/RegisterPage.feature:21)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>com.web.automation.base.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>screenshot
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='../embedded1.png' src="../embedded1.png">
+  
+    
+
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="68"><span class="badge log pass-bg mr-2">Pass</span>Register the new user with empty fields</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userOpenTheApplicationUsingTheURL()">
+                <span>Given User open the application using the URL</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userClicksTheMyAccountDropdown()">
+                <span>When User clicks the My Account dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userSelectRegisterFromTheDropdown()">
+                <span>When User select Register from the dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userClicksContinueButton()">
+                <span>When User clicks continue button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userVerifyTheWarningMessagesDisplayedInFields()">
+                <span>Then User verify the warning messages displayed in fields</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.junit.ComparisonFailure</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.junit.ComparisonFailure</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>18:38:34 pm</td>
+<td>
+<a href="#" class="linked" test-id='49' id='66'>Then User verify the account is successfully registered</a>
+<div class="">
+<span class="badge badge-default">Register Page.Register the new user.Then User verify the account is successfully registered</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c05cd28cde1617b9d0c05a831daff6cb97fd9fd5/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

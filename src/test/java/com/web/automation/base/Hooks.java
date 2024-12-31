@@ -27,7 +27,7 @@ public class Hooks {
 	@After
 	public void tearDown(Scenario scenario) {
 		if(scenario.isFailed()) {
-			Base.takesScreenshot(scenario.getName());
+			Base.takesScreenshot(scenario);
 		}
 		driver.quit();
 	}

@@ -11,6 +11,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.io.FileHandler;
 
+import com.google.common.io.Files;
 import com.web.automation.utils.PropertyLoader;
 
 import io.cucumber.java.Scenario;
@@ -38,16 +39,17 @@ public class Base {
     }
     
     
-   public static void takesScreenshot(String scenarioName) {
+   public static void takesScreenshot(Scenario scenario) {
 	   TakesScreenshot screen = (TakesScreenshot)driver;
-	   File srcFile = screen.getScreenshotAs(OutputType.FILE);
-	   File folder = new File(System.getProperty("user.dir")+"/test-results/screenshots/");
+	   final byte[] screenshot = screen.getScreenshotAs(OutputType.BYTES);
+	   scenario.attach(screenshot, "image/png", "screenshot");
+	   String path = System.getProperty("user.dir")+"/test-results/screenshots/";
+	   File folder = new File(path+scenario.getName().replace(' ', '_')+".png");
 	   if(!folder.exists()) {
 		   folder.mkdirs();
 	   }
-	   File desFile = new File(folder,scenarioName.replace(' ', '_')+".png");
 	   try {
-		FileHandler.copy(srcFile, desFile);
+		Files.write(screenshot, folder);
 	   } catch (IOException e) {
 		e.printStackTrace();
 	   }
