@@ -28,4 +28,20 @@ When User select Register from the dropdown
 When User clicks continue button
 Then User verify the warning messages displayed in fields
 
+@TC_RP_004 @Register
+Scenario Outline: Registering the multiple users
+Given User open the application using the URL
+When User clicks the My Account dropdown
+When User select Register from the dropdown
+When User enters the personal details and passwords
+|firstName  |lastName   |email  |telephone  |password  |passwordConfirm|
+|<firstName>|<lastName> |<email>|<telephone>|<password>|<passwordConfirm>|
+When User selects subscribe radio button as "yes"
+When User selects privacy policy checkbox
+When User clicks continue button
+Then User verify the account is successfully registered
 
+Examples:
+|firstName|lastName   |email           		|telephone |password |passwordConfirm|
+|Tester   |one        |TesterOne@gmail.com|1234567890|123456789|123456789      |
+|Tester   |two        |TesterTwo@gmail.com|2234567890|223456789|223456789      |
