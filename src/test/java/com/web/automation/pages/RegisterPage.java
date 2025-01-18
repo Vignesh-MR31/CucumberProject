@@ -70,6 +70,9 @@ public class RegisterPage {
 	
 	@FindBy(xpath = "(//div[@class='text-danger'])[5]")
 	private WebElement passwordWarning;
+	
+	@FindBy(xpath = "//div[contains(@class,'alert')]")
+	private WebElement warningMessage;
 
 	
 	public WebElement registerOptionElement() {
@@ -146,5 +149,9 @@ public class RegisterPage {
 	
 	public WebElement passwordWarningWebElement() {
 		return passwordWarning;
+	}
+	
+	public WebElement warningMessageWebElement() {
+		return warningMessage;
 	}
 }

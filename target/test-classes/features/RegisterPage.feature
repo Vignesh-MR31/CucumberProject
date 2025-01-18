@@ -45,3 +45,17 @@ Examples:
 |firstName|lastName   |email           		|telephone |password |passwordConfirm|
 |Tester   |one        |TesterOne@gmail.com|1234567890|123456789|123456789      |
 |Tester   |two        |TesterTwo@gmail.com|2234567890|223456789|223456789      |
+
+
+@TC_RP_005 @Register
+Scenario: Register the already registered user
+Given User open the application using the URL
+When User clicks the My Account dropdown
+When User select Register from the dropdown
+When User enters the personal details and passwords
+|firstName|lastName   |email           |telephone |password |passwordConfirm|
+|vicky		|M R        |vicky@1gmail.com|1234567890|1234567  |1234567				|
+When User selects subscribe radio button as "yes"
+When User selects privacy policy checkbox
+When User clicks continue button
+Then User verify the warning message displayed in register page

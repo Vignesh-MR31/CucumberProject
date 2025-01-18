@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan 2, 2025 06:03:31 pm</span></a>
+<a href="#"><span class="badge badge-primary">Jan 18, 2025 11:23:28 am</span></a>
 </li>
 </ul>
 </div>
@@ -45,11 +45,6 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
-</a>
-</li>
-<li class="nav-item dropdown" onclick="toggleView('exception-view')">
-<a id="nav-exception" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 </ul>
@@ -66,7 +61,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -74,31 +69,31 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@TC_RP_001</a><a class="dropdown-item" href="#">@TC_RP_003</a><a class="dropdown-item" href="#">@TC_RP_004</a><a class="dropdown-item" href="#">@Register</a><a class="dropdown-item" href="#">@TC_RP_002</a>
+<a class="dropdown-item" href="#">@TC_RP_005</a><a class="dropdown-item" href="#">@Register</a>
 </ul>
 </li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Register Page</p>
             <p class="text-sm">
-              <span>6:03:31 pm</span> / <span>00:00:18:247</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>11:23:29 am</span> / <span>00:00:06:196</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Register Page</h5>
-<span class='badge badge-success'>01.02.2025 6:03:31 pm</span>
-<span class='badge badge-danger'>01.02.2025 6:03:49 pm</span>
-<span class='badge badge-default'>00:00:18:247</span>
+<h5 class="test-status text-pass">Register Page</h5>
+<span class='badge badge-success'>01.18.2025 11:23:29 am</span>
+<span class='badge badge-danger'>01.18.2025 11:23:35 am</span>
+<span class='badge badge-default'>00:00:06:196</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -111,44 +106,10 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Navigating to Register Page</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Register the already registered user</div>
       </div>
     </div>
         <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userOpenTheApplicationUsingTheURL()">
-                <span>Given User open the application using the URL</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userClicksTheMyAccountDropdown()">
-                <span>When User clicks the My Account dropdown</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userSelectRegisterFromTheDropdown()">
-                <span>When User select Register from the dropdown</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userSuccessfullyNavigatedToRegisterPage()">
-                <span>Then User successfully navigated to Register Page</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="9"><span class="badge log fail-bg mr-2">Fail</span>Register the new user</div>
-          <div class="status-avatar float-right mr-4">
-            <i class="fa fa-paperclip"></i>
-          </div>
-      </div>
-    </div>
-        <div class="">
           <div class="card-body">
               <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userOpenTheApplicationUsingTheURL()">
                 <span>Given User open the application using the URL</span>
@@ -187,234 +148,12 @@
       <div>
       </div>
               </div>
-              <div class="step fail-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userVerifyTheAccountIsSuccessfullyRegistered()">
-                <span>Then User verify the account is successfully registered</span>
-      <div>
-        <textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[Your Account Has Been Created!]> but was:<[Register Account]>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.web.automation.stepdefinitions.RegisterPageSteps.userVerifyTheAccountIsSuccessfullyRegistered(RegisterPageSteps.java:72)
-	at ✽.User verify the account is successfully registered(file:///D:/Learning-Automation-New-Java/CucumberAutomationProject/src/test/resources/features/RegisterPage.feature:21)
-</textarea>
-      
-      </div>
-              </div>
-              <div class="step pass-bg" title="AFTER">
-                <span>com.web.automation.base.Hooks.tearDown(io.cucumber.java.Scenario)</span>
-      <div>screenshot
-          <div class="row mb-3"><div class="col-md-3">
-    
-
-<img data-featherlight='../embedded1.png' src="../embedded1.png">
-  
-    
-
-    </div></div>
-</div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userVerifyTheWarningMessageDisplayedInRegisterPage()">
+                <span>Then User verify the warning message displayed in register page</span>
       <div>
       </div>
               </div>
           </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="20"><span class="badge log pass-bg mr-2">Pass</span>Register the new user with empty fields</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userOpenTheApplicationUsingTheURL()">
-                <span>Given User open the application using the URL</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userClicksTheMyAccountDropdown()">
-                <span>When User clicks the My Account dropdown</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userSelectRegisterFromTheDropdown()">
-                <span>When User select Register from the dropdown</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userClicksContinueButton()">
-                <span>When User clicks continue button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userVerifyTheWarningMessagesDisplayedInFields()">
-                <span>Then User verify the warning messages displayed in fields</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="28"><span class="badge log fail-bg mr-2">Fail</span>Registering the multiple users</div>
-          <div class="status-avatar float-right mr-4">
-            <i class="fa fa-paperclip"></i>
-          </div>
-      </div>
-    </div>
-        <div class="scenario_outline ">
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="29"><span class="badge log fail-bg mr-2">Fail</span>Registering the multiple users</div>
-                    <div class="status-avatar float-right">
-                      <i class="fa fa-paperclip"></i>
-                    </div>
-                </div>
-              </div>
-              <div class="card-body mt-3 ">
-                  <div class="step pass-bg">
-                    <span>Given User open the application using the URL</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When User clicks the My Account dropdown</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When User select Register from the dropdown</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When User enters the personal details and passwords</span>
-      <div><table class='markup-table table '><tr><td>firstName</td><td>lastName</td><td>email</td><td>telephone</td><td>password</td><td>passwordConfirm</td></tr><tr><td>Tester</td><td>one</td><td>TesterOne@gmail.com</td><td>1234567890</td><td>123456789</td><td>123456789</td></tr></table>
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When User selects subscribe radio button as "yes"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When User selects privacy policy checkbox</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When User clicks continue button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step fail-bg">
-                    <span>Then User verify the account is successfully registered</span>
-      <div>
-        <textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[Your Account Has Been Created!]> but was:<[Register Account]>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.web.automation.stepdefinitions.RegisterPageSteps.userVerifyTheAccountIsSuccessfullyRegistered(RegisterPageSteps.java:72)
-	at ✽.User verify the account is successfully registered(file:///D:/Learning-Automation-New-Java/CucumberAutomationProject/src/test/resources/features/RegisterPage.feature:42)
-</textarea>
-      
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>com.web.automation.base.Hooks.tearDown(io.cucumber.java.Scenario)</span>
-      <div>screenshot
-          <div class="row mb-3"><div class="col-md-3">
-    
-
-<img data-featherlight='../embedded2.png' src="../embedded2.png">
-  
-    
-
-    </div></div>
-</div>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="40"><span class="badge log fail-bg mr-2">Fail</span>Registering the multiple users</div>
-                    <div class="status-avatar float-right">
-                      <i class="fa fa-paperclip"></i>
-                    </div>
-                </div>
-              </div>
-              <div class="card-body mt-3 ">
-                  <div class="step pass-bg">
-                    <span>Given User open the application using the URL</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When User clicks the My Account dropdown</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When User select Register from the dropdown</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When User enters the personal details and passwords</span>
-      <div><table class='markup-table table '><tr><td>firstName</td><td>lastName</td><td>email</td><td>telephone</td><td>password</td><td>passwordConfirm</td></tr><tr><td>Tester</td><td>two</td><td>TesterTwo@gmail.com</td><td>2234567890</td><td>223456789</td><td>223456789</td></tr></table>
-      </div>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When User selects subscribe radio button as "yes"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When User selects privacy policy checkbox</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When User clicks continue button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step fail-bg">
-                    <span>Then User verify the account is successfully registered</span>
-      <div>
-        <textarea disabled class="code-block">org.junit.ComparisonFailure: expected:<[Your Account Has Been Created!]> but was:<[Register Account]>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.web.automation.stepdefinitions.RegisterPageSteps.userVerifyTheAccountIsSuccessfullyRegistered(RegisterPageSteps.java:72)
-	at ✽.User verify the account is successfully registered(file:///D:/Learning-Automation-New-Java/CucumberAutomationProject/src/test/resources/features/RegisterPage.feature:42)
-</textarea>
-      
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>com.web.automation.base.Hooks.tearDown(io.cucumber.java.Scenario)</span>
-      <div>screenshot
-          <div class="row mb-3"><div class="col-md-3">
-    
-
-<img data-featherlight='../embedded3.png' src="../embedded3.png">
-  
-    
-
-    </div></div>
-</div>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
         </div>
   </div>
 </div>
@@ -429,79 +168,7 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="test-wrapper row view exception-view attributes-view">
-<div class="test-list">
-<div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
-</div>
-<div class="test-list-wrapper scrollable">
-<ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>3</span>
-</span>
-<p class="name">org.junit.ComparisonFailure</p>
-<p class="duration text-sm">3 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>org.junit.ComparisonFailure</h4>
-<span status="fail" class='badge log badge-danger'>3 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>18:03:38 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='18'>Then User verify the account is successfully registered</a>
-<div class="">
-<span class="badge badge-default">Register Page.Register the new user.Then User verify the account is successfully registered</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>18:03:45 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='38'>Then User verify the account is successfully registered</a>
-<div class="">
-<span class="badge badge-default">Register Page.Registering the multiple users.Then User verify the account is successfully registered</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>18:03:49 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='49'>Then User verify the account is successfully registered</a>
-<div class="">
-<span class="badge badge-default">Register Page.Registering the multiple users.Then User verify the account is successfully registered</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="test-content scrollable">
-<div class="test-content-detail">
-<div class="detail-body"></div>
-</div>
-</div>
-</div>        </div>
+        </div>
       </div>
     </div>
   </div>

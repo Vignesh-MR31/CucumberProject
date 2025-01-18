@@ -87,5 +87,11 @@ public class RegisterPageSteps {
 	    Assert.assertEquals(passwordWarning,registerPage.passwordWarningWebElement().getText());
 	    Assert.assertEquals(privacyPolicyWarning,registerPage.privacyPolicyWarningWebElement().getText());
 	}
+	
+	@Then("User verify the warning message displayed in register page")
+	public void userVerifyTheWarningMessageDisplayedInRegisterPage() {
+	    String expectedWarningMessage = "Warning: E-Mail Address is already registered!";
+	    Assert.assertEquals(expectedWarningMessage,registerPage.warningMessageWebElement().getText());
+	}
 
 }
