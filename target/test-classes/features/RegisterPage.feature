@@ -59,3 +59,16 @@ When User selects subscribe radio button as "yes"
 When User selects privacy policy checkbox
 When User clicks continue button
 Then User verify the warning message displayed in register page
+
+@TC_RP_006 @Register
+Scenario: Register the user account when No option is selected for Newsletter field
+Given User open the application using the URL
+When User clicks the My Account dropdown
+When User select Register from the dropdown
+When User enters the personal details and passwords
+|firstName|lastName   |email           |telephone |password |passwordConfirm|
+|vicky		|R          |vicky@2gmail.com|1234567890|1234567  |1234567				|
+When User selects subscribe radio button as "no"
+When User selects privacy policy checkbox
+When User clicks continue button
+Then User verify the account is successfully registered

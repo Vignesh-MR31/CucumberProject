@@ -35,6 +35,12 @@ public class LoginPage {
 	@FindBy(xpath = "(//div[@id='account-login']/div)[1]")
 	private WebElement warningMessage;
 	
+	@FindBy(linkText = "Forgotten Password")
+	private WebElement forgottenPassword;
+	
+	@FindBy(xpath = "//div[@id='content']/h1")
+	private WebElement forgotYourPasswordHeader;
+	
 	public WebElement myAccountElement() {
 		return myAccount;
 	}
@@ -61,5 +67,13 @@ public class LoginPage {
 	
 	public WebElement warningMessageElement() {
 		return warningMessage;
+	}
+	
+	public WebElement forgottenPasswordElement() {
+		return forgottenPassword;
+	}
+	
+	public WebElement forgotYourPasswordElement() {
+		return forgotYourPasswordHeader;
 	}
 }

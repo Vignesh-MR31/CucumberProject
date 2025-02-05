@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan 18, 2025 11:23:28 am</span></a>
+<a href="#"><span class="badge badge-primary">Feb 5, 2025 09:21:46 pm</span></a>
 </li>
 </ul>
 </div>
@@ -69,7 +69,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@TC_RP_005</a><a class="dropdown-item" href="#">@Register</a>
+<a class="dropdown-item" href="#">@TC_LP_008</a><a class="dropdown-item" href="#">@Login</a>
 </ul>
 </li>
 </ul>
@@ -80,9 +80,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Register Page</p>
+            <p class="name">Login Page</p>
             <p class="text-sm">
-              <span>11:23:29 am</span> / <span>00:00:06:196</span>
+              <span>9:21:46 pm</span> / <span>00:00:04:508</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -90,10 +90,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Register Page</h5>
-<span class='badge badge-success'>01.18.2025 11:23:29 am</span>
-<span class='badge badge-danger'>01.18.2025 11:23:35 am</span>
-<span class='badge badge-default'>00:00:06:196</span>
+<h5 class="test-status text-pass">Login Page</h5>
+<span class='badge badge-success'>02.05.2025 9:21:46 pm</span>
+<span class='badge badge-danger'>02.05.2025 9:21:51 pm</span>
+<span class='badge badge-default'>00:00:04:508</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -106,7 +106,7 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Register the already registered user</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Enter the email and password using keyboard keys</div>
       </div>
     </div>
         <div class="collapse">
@@ -121,35 +121,28 @@
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userSelectRegisterFromTheDropdown()">
-                <span>When User select Register from the dropdown</span>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userSelectLoginFromTheDropdown()">
+                <span>When User select Login from the dropdown</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userEntersThePersonalDetailsAndPasswords(io.cucumber.datatable.DataTable)">
-                <span>When User enters the personal details and passwords</span>
-      <div><table class='markup-table table '><tr><td>firstName</td><td>lastName</td><td>email</td><td>telephone</td><td>password</td><td>passwordConfirm</td></tr><tr><td>vicky</td><td>M R</td><td>vicky@1gmail.com</td><td>1234567890</td><td>1234567</td><td>1234567</td></tr></table>
-      </div>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userEntersTheEmailAddressUsingTabKey(java.lang.String)">
+                <span>When User enters the "Vickymr@gmail.com" email address using tab key</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userSelectsSubscribeRadioButtonAs(java.lang.String)">
-                <span>When User selects subscribe radio button as "yes"</span>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userEntersThePasswordUsingTabKey(java.lang.String)">
+                <span>When User enters the "12345678" password using tab key</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userSelectsPrivacyPolicyCheckbox()">
-                <span>When User selects privacy policy checkbox</span>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userClicksTheLoginButton()">
+                <span>And User clicks the Login button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userClicksContinueButton()">
-                <span>When User clicks continue button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.RegisterPageSteps.userVerifyTheWarningMessageDisplayedInRegisterPage()">
-                <span>Then User verify the warning message displayed in register page</span>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userVerifyTheMyAccountPageIsDisplayed()">
+                <span>Then User verify the My Account page is displayed</span>
       <div>
       </div>
               </div>

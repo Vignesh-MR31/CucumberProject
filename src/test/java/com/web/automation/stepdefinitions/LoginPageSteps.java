@@ -1,7 +1,9 @@
 package com.web.automation.stepdefinitions;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 //import org.testng.Assert;
+import org.openqa.selenium.interactions.Actions;
 
 import com.web.automation.base.TestContext;
 import com.web.automation.pages.LandingPage;
@@ -17,6 +19,7 @@ public class LoginPageSteps {
 	private WebDriver driver;
 	LoginPage loginPage;
 	LandingPage landingPage;
+	Actions actions;
 	
 	public LoginPageSteps(TestContext context) {
 		driver = context.driver;
@@ -71,5 +74,32 @@ public class LoginPageSteps {
 	public void userVerifyTheWarningMessageDisplayed() {
 	    String expectedWarningMessage = "Warning: No match for E-Mail Address and/or Password.";
 	    Assert.assertEquals(expectedWarningMessage, loginPage.warningMessageElement().getText());
+	}
+	
+	@When("User clicks the forgotten password link")
+	public void userClicksTheForgottenPasswordLink() {
+	    loginPage.forgottenPasswordElement().click();
+	}
+	
+	@Then("User successfully navigated to forgot your password page")
+	public void userSuccessfullyNavigatedToForgotYourPasswordPage() {
+	    String expectedHeader = "Forgot Your Password?";
+	    Assert.assertEquals(expectedHeader, loginPage.forgotYourPasswordElement().getText());
+	}
+	
+	@When("User enters the {string} email address using tab key")
+	public void userEntersTheEmailAddressUsingTabKey(String email) {
+	   actions = new Actions(driver);
+	   for(int i=0; i<22;i++) {
+		   actions.keyDown(Keys.TAB).build().perform();
+	   }
+	   loginPage.emailAddressElement().sendKeys(email);
+	}
+	
+	@When("User enters the {string} password using tab key")
+	public void userEntersThePasswordUsingTabKey(String password) {
+		actions = new Actions(driver);
+		actions.keyDown(Keys.TAB).build().perform();
+		loginPage.passwordElement().sendKeys(password);
 	}
 }
