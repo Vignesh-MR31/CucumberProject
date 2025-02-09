@@ -41,6 +41,24 @@ public class LoginPage {
 	@FindBy(xpath = "//div[@id='content']/h1")
 	private WebElement forgotYourPasswordHeader;
 	
+	@FindBy(linkText = "Logout")
+	private WebElement logout;
+	
+	@FindBy(linkText = "Change your password")
+	private WebElement changeYourPassword;
+	
+	@FindBy(id = "input-password")
+	private WebElement changePassword;
+	
+	@FindBy(id = "input-confirm")
+	private WebElement changePasswordConfirm;
+	
+	@FindBy(xpath = "//input[@type='submit']")
+	private WebElement continueButton;
+	
+	@FindBy(xpath = "//div[contains(@class,'alert')]")
+	private WebElement changePasswordSuccessMessage;
+	
 	public WebElement myAccountElement() {
 		return myAccount;
 	}
@@ -75,5 +93,29 @@ public class LoginPage {
 	
 	public WebElement forgotYourPasswordElement() {
 		return forgotYourPasswordHeader;
+	}
+	
+	public WebElement logoutElement() {
+		return logout;
+	}
+	
+	public WebElement changeYourPasswordElement() {
+		return changeYourPassword;
+	}
+	
+	public WebElement changePasswordElement() {
+		return changePassword;
+	}
+	
+	public WebElement changePasswordConfirmElement() {
+		return changePasswordConfirm;
+	}
+	
+	public WebElement continueButtonElement() {
+		return continueButton;
+	}
+	
+	public WebElement changePasswordSuccessMessageElement() {
+		return changePasswordSuccessMessage;
 	}
 }

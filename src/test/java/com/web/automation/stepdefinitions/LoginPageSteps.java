@@ -102,4 +102,49 @@ public class LoginPageSteps {
 		actions.keyDown(Keys.TAB).build().perform();
 		loginPage.passwordElement().sendKeys(password);
 	}
+	
+	@Then("User verify the the E-Mail Address and Password fields have the placeholder")
+	public void userVerifyTheTheEMailAddressAndPasswordFieldsHaveThePlaceholder() {
+		String emailPlaceholder = "E-Mail Address";
+		String passwordPlaceholder = "Password";
+	    Assert.assertEquals(emailPlaceholder, loginPage.emailAddressElement().getAttribute("placeholder"));
+	    Assert.assertEquals(passwordPlaceholder, loginPage.passwordElement().getAttribute("placeholder"));
+	}
+	
+	@Then("User clicks the browser back button")
+	public void userClicksTheBrowserBackButton() throws InterruptedException {
+	    driver.navigate().back();
+	    Thread.sleep(10000);
+	}
+	
+	@When("User clicks the Logout from the dropdown")
+	public void userClicksTheLogoutFromTheDropdown() {
+	    loginPage.logoutElement().click();
+	}
+
+	@When("User clicks the change your password link")
+	public void userClicksTheChangeYourPasswordLink() {
+	   loginPage.changeYourPasswordElement().click();
+	}
+	
+	@When("User enters the {string} in password field in change password")
+	public void userEntersTheInPasswordFieldInChangePassword(String newPassword) {
+	   loginPage.changePasswordElement().sendKeys(newPassword);
+	}
+	
+	@When("User enters the {string} in password confirm field in change password")
+	public void userEntersTheInPasswordConfirmFieldInChangePassword(String newPassword) {
+		loginPage.changePasswordConfirmElement().sendKeys(newPassword);
+	}
+	
+	@When("User clicks the continue button")
+	public void userClicksTheContinueButton() {
+	    loginPage.continueButtonElement().click();
+	}
+	
+	@Then("User verify the success message displayed after changing the password")
+	public void userVerifyTheSuccessMessageDisplayedAfterChangingThePassword() {
+	   String passwordSuccessMessage = "Success: Your password has been successfully updated.";
+	   Assert.assertEquals(passwordSuccessMessage, loginPage.changePasswordSuccessMessageElement().getText());
+	}
 }

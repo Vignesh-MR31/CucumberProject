@@ -13,7 +13,7 @@ Given User open the application using the URL
 When User clicks the My Account dropdown
 When User select Login from the dropdown
 When User enters "Vickymr@gmail.com" email address
-When User enters "12345678" password
+When User enters "123456789" password
 And User clicks the Login button
 Then User verify the My Account page is displayed
 
@@ -23,7 +23,7 @@ Given User open the application using the URL
 When User clicks the My Account dropdown
 When User select Login from the dropdown
 When User enters "Vickymr@gmail.com" email address
-When User enters "123456789" password
+When User enters "1234567890" password
 And User clicks the Login button
 Then User verify the warning message displayed
 
@@ -33,7 +33,7 @@ Given User open the application using the URL
 When User clicks the My Account dropdown
 When User select Login from the dropdown
 When User enters "Vickymrs@gmail.com" email address
-When User enters "12345678" password
+When User enters "123456789" password
 And User clicks the Login button
 Then User verify the warning message displayed
 
@@ -43,8 +43,8 @@ Given User open the application using the URL
 When User clicks the My Account dropdown
 When User select Login from the dropdown
 When User enters "Vickymrs@gmail.com" email address
-When User enters "123456789" password
-And User clicks the Login button
+When User enters "1234567890" password
+When User clicks the Login button
 Then User verify the warning message displayed
 
 @TC_LP_006 @Login
@@ -52,7 +52,7 @@ Scenario: Login without providing any credentials
 Given User open the application using the URL
 When User clicks the My Account dropdown
 When User select Login from the dropdown
-And User clicks the Login button
+When User clicks the Login button
 Then User verify the warning message displayed
 
 @TC_LP_007 @Login
@@ -60,7 +60,7 @@ Scenario: Navigating to forgot your password page
 Given User open the application using the URL
 When User clicks the My Account dropdown
 When User select Login from the dropdown
-And User clicks the forgotten password link
+When User clicks the forgotten password link
 Then User successfully navigated to forgot your password page
 
 @TC_LP_008 @Login
@@ -69,6 +69,72 @@ Given User open the application using the URL
 When User clicks the My Account dropdown
 When User select Login from the dropdown
 When User enters the "Vickymr@gmail.com" email address using tab key
-When User enters the "12345678" password using tab key
-And User clicks the Login button
+When User enters the "123456789" password using tab key
+When User clicks the Login button
 Then User verify the My Account page is displayed
+
+@TC_LP_009 @Login
+Scenario: User verify the E-Mail Address and Password fields have the placeholder
+Given User open the application using the URL
+When User clicks the My Account dropdown
+When User select Login from the dropdown
+Then User verify the the E-Mail Address and Password fields have the placeholder
+
+@TC_LP_010 @Login
+Scenario: User Verify Logging into the Application and browsing back using Browser back button 
+Given User open the application using the URL
+When User clicks the My Account dropdown
+When User select Login from the dropdown
+When User enters "Vickymr@gmail.com" email address
+When User enters "123456789" password
+When User clicks the Login button
+Then User clicks the browser back button
+
+@TC_LP_011 @Login
+Scenario: User Verify Loggingout from the Application and browsing back using Browser back button
+Given User open the application using the URL
+When User clicks the My Account dropdown
+When User select Login from the dropdown
+When User enters "Vickymr@gmail.com" email address
+When User enters "123456789" password
+When User clicks the Login button
+When User clicks the My Account dropdown
+When User clicks the Logout from the dropdown
+Then User clicks the browser back button
+
+@TC_LP_012 @Login
+Scenario: User Verify the change your password
+Given User open the application using the URL
+When User clicks the My Account dropdown
+When User select Login from the dropdown
+When User enters "Vickymr@gmail.com" email address
+When User enters "12345678" password
+When User clicks the Login button
+When User clicks the change your password link
+When User enters the "123456789" in password field in change password
+When User enters the "123456789" in password confirm field in change password
+When User clicks the continue button
+Then User verify the success message displayed after changing the password
+
+@TC_LP_013 @Login
+Scenario: User Verify Logging into the Application after changing the password
+Given User open the application using the URL
+When User clicks the My Account dropdown
+When User select Login from the dropdown
+When User enters "Tester001001@gmail.com" email address
+When User enters "1234567890" password
+When User clicks the Login button
+When User clicks the change your password link
+When User enters the "123456789" in password field in change password
+When User enters the "123456789" in password confirm field in change password
+When User clicks the continue button
+When User clicks the My Account dropdown
+When User clicks the Logout from the dropdown
+When User clicks the My Account dropdown
+When User select Login from the dropdown
+When User enters "Tester001001@gmail.com" email address
+When User enters "123456789" password
+When User clicks the Login button
+Then User verify the My Account page is displayed
+
+  
