@@ -46,7 +46,6 @@ Examples:
 |Tester   |one        |TesterOne@gmail.com|1234567890|123456789|123456789      |
 |Tester   |two        |TesterTwo@gmail.com|2234567890|223456789|223456789      |
 
-
 @TC_RP_005 @Register
 Scenario: Register the already registered user
 Given User open the application using the URL
@@ -72,3 +71,19 @@ When User selects subscribe radio button as "no"
 When User selects privacy policy checkbox
 When User clicks continue button
 Then User verify the account is successfully registered
+
+@TC_RP_007 @Register
+Scenario: User Verify Navigating to Login page from Register page by clicking Login column option
+Given User open the application using the URL
+When User clicks the My Account dropdown
+When User select Register from the dropdown
+When User clicks Login column option
+Then User successfully navigated to Login Page
+
+@TC_RP_008 @Register
+Scenario: User Verify Navigating to Login page from Register page by clicking login page link
+Given User open the application using the URL
+When User clicks the My Account dropdown
+When User select Register from the dropdown
+When User clicks Login page link
+Then User successfully navigated to Login Page

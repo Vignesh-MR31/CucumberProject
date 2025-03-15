@@ -13,7 +13,7 @@ Given User open the application using the URL
 When User clicks the My Account dropdown
 When User select Login from the dropdown
 When User enters "Vickymr@gmail.com" email address
-When User enters "123456789" password
+When User enters "1234567890" password
 And User clicks the Login button
 Then User verify the My Account page is displayed
 
@@ -121,20 +121,43 @@ Scenario: User Verify Logging into the Application after changing the password
 Given User open the application using the URL
 When User clicks the My Account dropdown
 When User select Login from the dropdown
-When User enters "Tester001001@gmail.com" email address
-When User enters "1234567890" password
+When User enters "Vickymr@gmail.com" email address
+When User enters "123456789" password
 When User clicks the Login button
 When User clicks the change your password link
-When User enters the "123456789" in password field in change password
-When User enters the "123456789" in password confirm field in change password
+When User enters the "1234567890" in password field in change password
+When User enters the "1234567890" in password confirm field in change password
 When User clicks the continue button
 When User clicks the My Account dropdown
 When User clicks the Logout from the dropdown
 When User clicks the My Account dropdown
 When User select Login from the dropdown
-When User enters "Tester001001@gmail.com" email address
-When User enters "123456789" password
+When User enters "Vickymr@gmail.com" email address
+When User enters "1234567890" password
 When User clicks the Login button
 Then User verify the My Account page is displayed
 
+@TC_LP_014 @Login
+Scenario: User Verify Navigating to Register page from login page by clicking continue button
+Given User open the application using the URL
+When User clicks the My Account dropdown
+When User select Login from the dropdown
+When User clicks new customer continue button
+Then User successfully navigated to Register Page
+
+@TC_LP_015 @Login
+Scenario: User Verify Navigating to Register page from login page by clicking Register column Option
+Given User open the application using the URL
+When User clicks the My Account dropdown
+When User select Login from the dropdown
+When User clicks Register column option
+Then User successfully navigated to Register Page
+
+@TC_LP_016 @Login
+Scenario: User Verify Navigating to Forgotten Password page from login page by clicking Forgotten Password column Option
+Given User open the application using the URL
+When User clicks the My Account dropdown
+When User select Login from the dropdown
+When User clicks Forgotten Password column option
+Then User successfully navigated to forgot your password page
   
