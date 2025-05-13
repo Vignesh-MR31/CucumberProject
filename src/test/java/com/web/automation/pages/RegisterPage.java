@@ -79,6 +79,21 @@ public class RegisterPage {
 	
 	@FindBy(linkText = "login page")
 	private WebElement loginPageLink;
+	
+	@FindBy(linkText = "Privacy Policy")
+	private WebElement privacyPolicyLink;
+	
+	@FindBy(xpath = "//h4[contains(text(),'Privacy Policy')]")
+	private WebElement privacyPolicyHeader;
+	
+	@FindBy(linkText = "Forgotten Password")
+	private WebElement forgottenPasswordOption;
+	
+	@FindBy(xpath = "//div[@id='content']//h1")
+	private WebElement forgotYourPasswordHeader;
+	
+	@FindBy(xpath = "//div[contains(text(), 'does not match password!')]")
+	private WebElement passwordConfirmationWarningMessage;
 
 	public WebElement registerOptionElement() {
 		return registerOption;
@@ -166,5 +181,25 @@ public class RegisterPage {
 	
 	public WebElement loginPageLinkWebElement() {
 		return loginPageLink;
+	}
+	
+	public WebElement privacyPolicyLinkWebElement() {
+		return privacyPolicyLink;
+	}
+	
+	public WebElement privacyPolicyHeaderWebElement() {
+		return privacyPolicyHeader;
+	}
+	
+	public WebElement forgottenPasswordOptionWebElement() {
+		return forgottenPasswordOption;
+	}
+	
+	public WebElement forgotYourPasswordHeaderWebElement() {
+		return forgotYourPasswordHeader;
+	}
+	
+	public WebElement passwordConfirmationWarningMessageWebElement() {
+		return passwordConfirmationWarningMessage;
 	}
 }

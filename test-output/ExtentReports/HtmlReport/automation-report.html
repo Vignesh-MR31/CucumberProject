@@ -49,7 +49,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Mar 15, 2025 09:59:01 pm</span>
+			<span class='label blue darken-3 suite-start-time'>May 1, 2025 09:12:06 pm</span>
 			</a>
 		</ul>
 	</div>
@@ -76,7 +76,7 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@TC_RP_008</a></li>
+					<li><a href='#'>@TC_RP_015</a></li>
 					<li><a href='#'>@Register</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
@@ -158,7 +158,7 @@
                 </div>
                 <div class='block text-small'>
                     <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>5</span> steps passed</span>
+                    <span class='strong'>8</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -188,7 +188,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Register Page</span>
-						<span class='test-time'>Mar 15, 2025 09:59:02 pm</span>
+						<span class='test-time'>May 1, 2025 09:12:06 pm</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -201,15 +201,15 @@
 
 <div class='scenario node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 05.354</span>
+	<span class='duration right label'>00 00 05.041</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User Verify Navigating to Login page from Register page by clicking login page link</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User Verify the Registring an Account by filling different characters in Password field and Password Confirm field</div>
 	</div>
 	
 	
 		<div class='category-list'>
-				<span class='category label'>@TC_RP_008</span>
 				<span class='category label'>@Register</span>
+				<span class='category label'>@TC_RP_015</span>
 		</div>
 	
 	<ul class='steps'>
@@ -229,12 +229,28 @@
 
 		</li>
 		<li test-id='7' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(com.web.automation.stepdefinitions.RegisterPageSteps.userClicksLoginPageLink())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks Login page link</div>
+			<div class="step-name" title="(com.web.automation.stepdefinitions.RegisterPageSteps.userEntersThePersonalDetailsAndPasswords(io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User enters the personal details and passwords</div>
+
+
+					<div class="node-step"><table class='markup-table table '><tr><td>firstName</td><td>lastName</td><td>email</td><td>telephone</td><td>password</td><td>passwordConfirm</td></tr><tr><td>vicky</td><td>R</td><td>vickyR@gmail.com</td><td>1234567890</td><td>1234567</td><td>7654321</td></tr></table></div>
+		</li>
+		<li test-id='8' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.web.automation.stepdefinitions.RegisterPageSteps.userSelectsSubscribeRadioButtonAs(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User selects subscribe radio button as "yes"</div>
 
 
 		</li>
-		<li test-id='8' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(com.web.automation.stepdefinitions.LoginPageSteps.userSuccessfullyNavigatedToLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User successfully navigated to Login Page</div>
+		<li test-id='9' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.web.automation.stepdefinitions.RegisterPageSteps.userSelectsPrivacyPolicyCheckbox())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User selects privacy policy checkbox</div>
+
+
+		</li>
+		<li test-id='10' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.web.automation.stepdefinitions.RegisterPageSteps.userClicksContinueButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks continue button</div>
+
+
+		</li>
+		<li test-id='11' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.web.automation.stepdefinitions.RegisterPageSteps.userVerifyTheWarningMessageWhenEnteringMismatchedPasswords())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User verify the warning message when entering mismatched passwords</div>
 
 
 		</li>
@@ -284,7 +300,7 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@TC_RP_008</span>
+						<span class='category-name'>@TC_RP_015</span>
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
 						</span>
@@ -306,8 +322,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 15, 2025 09:59:02 pm</td>
-										<td class='linked' test-id='2'>User Verify Navigating to Login page from Register page by clicking login page link</td>
+										<td>May 1, 2025 09:12:06 pm</td>
+										<td class='linked' test-id='2'>User Verify the Registring an Account by filling different characters in Password field and Password Confirm field</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -339,8 +355,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 15, 2025 09:59:02 pm</td>
-										<td class='linked' test-id='2'>User Verify Navigating to Login page from Register page by clicking login page link</td>
+										<td>May 1, 2025 09:12:06 pm</td>
+										<td class='linked' test-id='2'>User Verify the Registring an Account by filling different characters in Password field and Password Confirm field</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -377,25 +393,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>5</div>
+					<div class='panel-lead'>8</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Mar 15, 2025 09:59:01 pm</div>
+					<div class='panel-lead'>May 1, 2025 09:12:06 pm</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Mar 15, 2025 09:59:07 pm</div>
+			 		<div class='panel-lead'>May 1, 2025 09:12:11 pm</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 06.114</div>
+					<div class='panel-lead'>00 00 05.928</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -411,7 +427,7 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@TC_RP_008</td>
+							<td>@TC_RP_015</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -454,8 +470,8 @@
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 5,
-				passGrandChild: 5,
+				grandChildCount: 8,
+				passGrandChild: 8,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -467,7 +483,7 @@
 		
 		<script>
 			var timeline = {
-			        "Register Page":5.362
+			        "Register Page":5.044
 			};
 		</script>
 		

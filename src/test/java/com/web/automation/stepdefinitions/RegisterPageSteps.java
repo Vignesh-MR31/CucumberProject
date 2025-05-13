@@ -109,4 +109,75 @@ public class RegisterPageSteps {
 	public void userClicksLoginPageLink() {
 	    registerPage.loginPageLinkWebElement().click();
 	}
+	
+	@When("User enters the space {string} in the mandatory fields")
+	public void userEntersTheSpaceInTheMandatoryFields(String space) {
+		 registerPage.firstNameTextBoxWebElement().sendKeys(space);
+		 registerPage.lastNameTextBoxWebElement().sendKeys(space);
+		 registerPage.emailTextBoxWebElement().sendKeys(space);
+		 registerPage.telephoneTextBoxWebElement().sendKeys(space);
+		 registerPage.passwordTextBoxWebElement().sendKeys(space);
+		 registerPage.passwordConfirmTextBoxWebElement().sendKeys(space);
+	}
+
+
+	@Then("User verify the Privacy Policy checkbox is not selected by default")
+	public void userVerifyThePrivacyPolicyCheckboxIsNotSelectedByDefault() {
+	    Assert.assertEquals(false, registerPage.privacyPolicyCheckboxWebElement().isSelected());
+	}
+	
+
+	@Then("User verify the warning message displayed when registering the account without selecting the Privacy Policy checkbox")
+	public void userVerifyTheWarningMessageDisplayedWhenRegisteringTheAccountWithoutSelectingThePrivacyPolicyCheckbox() {
+		String privacyPolicyWarning = "Warning: You must agree to the Privacy Policy!";
+		Assert.assertEquals(privacyPolicyWarning,registerPage.privacyPolicyWarningWebElement().getText());
+	}
+
+	@When("User enters the password {string} in password field")
+	public void userEntersThePasswordInPasswordField(String password) {
+		registerPage.passwordTextBoxWebElement().sendKeys(password);
+	}
+	
+	@When("User enter the password {string} in confirm password field")
+	public void userEnterThePasswordInConfirmPasswordField(String confirmPassword) {
+		registerPage.passwordConfirmTextBoxWebElement().sendKeys(confirmPassword);
+	}
+	
+	@Then("User verify the characters in password and confirm password field is hidden")
+	public void userVerifyTheCharactersInPasswordAndConfirmPasswordFieldIsHidden() {
+		String hiddenValue = "password";
+		Assert.assertEquals(hiddenValue, registerPage.passwordTextBoxWebElement().getAttribute("type"));
+		Assert.assertEquals(hiddenValue, registerPage.passwordConfirmTextBoxWebElement().getAttribute("type"));
+		
+	}
+
+	@When("User clicks privacy policy link")
+	public void userClicksPrivacyPolicyLink() {
+	    registerPage.privacyPolicyLinkWebElement().click();
+	}
+	
+	@Then("User verify the privacy policy")
+	public void userVerifyThePrivacyPolicy() throws InterruptedException {
+		Thread.sleep(3000);
+	    String expectedPrivacyPolicyHeader = "Privacy Policy";
+	    Assert.assertEquals(expectedPrivacyPolicyHeader, registerPage.privacyPolicyHeaderWebElement().getText());
+	}
+	
+	@When("User clicks Forgotten Password Option in Register Page")
+	public void userClicksForgottenPasswordOptionInRegisterPage() {
+	    registerPage.forgottenPasswordOptionWebElement().click();
+	}
+	
+	@Then("User verify the Forgotten Password Page is displayed")
+	public void userVerifyTheForgottenPasswordPageIsDisplayed() {
+	    String expectedForgotYourPasswordHeader = "Forgot Your Password?";
+	    Assert.assertEquals(expectedForgotYourPasswordHeader, registerPage.forgotYourPasswordHeaderWebElement().getText());
+	}
+	
+	@Then("User verify the warning message when entering mismatched passwords")
+	public void userVerifyTheWarningMessageWhenEnteringMismatchedPasswords() {
+	    String expectedWarningMessage = "Password confirmation does not match password!";
+	    Assert.assertEquals(expectedWarningMessage, registerPage.passwordConfirmationWarningMessageWebElement().getText());
+	}
+
 }
