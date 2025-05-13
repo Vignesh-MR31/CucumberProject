@@ -68,6 +68,12 @@ public class LoginPage {
 	@FindBy(linkText = "Forgotten Password")
 	private WebElement forgottenPasswordColumnOption;
 	
+	@FindBy(linkText = "Logout")
+	private WebElement logoutOption;
+	
+	@FindBy(xpath = "//div[@id='content']/h1")
+	private WebElement accountLogoutHeader;
+	
 	public WebElement myAccountElement() {
 		return myAccount;
 	}
@@ -138,5 +144,13 @@ public class LoginPage {
 	
 	public WebElement forgottenPasswordColumnOptionElement() {
 		return forgottenPasswordColumnOption;
+	}
+	
+	public WebElement logoutOptionElement() {
+		return logoutOption;
+	}
+	
+	public WebElement accountLogoutHeaderElement() {
+		return accountLogoutHeader;
 	}
 }

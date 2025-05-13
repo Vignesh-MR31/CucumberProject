@@ -168,4 +168,16 @@ public class LoginPageSteps {
 	public void userClicksForgottenPasswordColumnOption() {
 	    loginPage.forgottenPasswordColumnOptionElement().click();
 	}
+	
+	@When("User select Logout from the dropdown")
+	public void userSelectLogoutFromTheDropdown() {
+	    loginPage.logoutOptionElement().click();
+	}
+	
+	@Then("User verify successfully logging out")
+	public void userVerifySuccessfullyLoggingOut() throws InterruptedException {
+		//Thread.sleep(5000);
+		String accountLogoutMessage = "Account Logout";
+		Assert.assertEquals(accountLogoutMessage, loginPage.accountLogoutHeaderElement().getText());
+	}
 }

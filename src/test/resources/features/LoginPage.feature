@@ -160,4 +160,17 @@ When User clicks the My Account dropdown
 When User select Login from the dropdown
 When User clicks Forgotten Password column option
 Then User successfully navigated to forgot your password page
+
+@TC_LP_017 @Login
+Scenario: User Verify Logging out by selecting Logout option from My Account dropmenu
+Given User open the application using the URL
+When User clicks the My Account dropdown
+When User select Login from the dropdown
+When User enters "Vickymr@gmail.com" email address
+When User enters "1234567890" password
+When User clicks the Login button
+When User clicks the My Account dropdown
+And User select Logout from the dropdown
+Then User verify successfully logging out
+
   
