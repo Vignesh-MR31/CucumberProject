@@ -25,18 +25,18 @@ public class Base {
     public static WebDriver InitializeDriver() {
     	String browser = PropertyLoader.loadProperty().getProperty("Browser");
     	switch(browser) {
-    	case "chrome":
-    		driver = new ChromeDriver();
-    		break;
-    	case "edge":
-    		driver = new EdgeDriver();
-    		break;
-    	case "firefox":
-    		driver = new FirefoxDriver();
-    		break;
-    	default:
-    		driver = new ChromeDriver();
-    		break;
+	    	case "chrome":
+	    		driver = new ChromeDriver();
+	    		break;
+	    	case "edge":
+	    		driver = new EdgeDriver();
+	    		break;
+	    	case "firefox":
+	    		driver = new FirefoxDriver();
+	    		break;
+	    	default:
+	    		driver = new ChromeDriver();
+	    		break;
     	}
         return driver;
     }

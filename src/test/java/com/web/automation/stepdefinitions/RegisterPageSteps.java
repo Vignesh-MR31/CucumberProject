@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.web.automation.base.TestContext;
 import com.web.automation.pages.RegisterPage;
+import com.web.automation.utils.CommonHelperMethods;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
@@ -157,9 +158,9 @@ public class RegisterPageSteps {
 	}
 	
 	@Then("User verify the privacy policy")
-	public void userVerifyThePrivacyPolicy() throws InterruptedException {
-		Thread.sleep(3000);
+	public void userVerifyThePrivacyPolicy() {
 	    String expectedPrivacyPolicyHeader = "Privacy Policy";
+	    CommonHelperMethods.explicitWaitMethod(driver, registerPage.privacyPolicyHeaderWebElement());
 	    Assert.assertEquals(expectedPrivacyPolicyHeader, registerPage.privacyPolicyHeaderWebElement().getText());
 	}
 	

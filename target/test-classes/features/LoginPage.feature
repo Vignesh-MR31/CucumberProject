@@ -161,7 +161,7 @@ When User select Login from the dropdown
 When User clicks Forgotten Password column option
 Then User successfully navigated to forgot your password page
 
-@TC_LP_017 @Login
+@TC_LP_017 @Login @Logout
 Scenario: User Verify Logging out by selecting Logout option from My Account dropmenu
 Given User open the application using the URL
 When User clicks the My Account dropdown
@@ -173,4 +173,54 @@ When User clicks the My Account dropdown
 And User select Logout from the dropdown
 Then User verify successfully logging out
 
+@TC_LP_018 @Login @Logout
+Scenario: User Verify Logging out by selecting Logout option from Right Column options
+Given User open the application using the URL
+When User clicks the My Account dropdown
+When User select Login from the dropdown
+When User enters "Vickymr@gmail.com" email address
+When User enters "1234567890" password
+When User clicks the Login button
+And User click the Logout from Right Column options
+Then User verify successfully logging out
+
+@TC_LP_019 @Login @Logout
+Scenario: User Verify Logout option is not displayed under My Account menu before logging In
+Given User open the application using the URL
+When User clicks the My Account dropdown
+Then User verify Logout option is not displayed in dropdown
+
+@TC_LP_020 @Login @Logout
+Scenario: User Verify Logout option is not displayed under Right Column options before logging in
+Given User open the application using the URL
+When User clicks the My Account dropdown
+Then User verify Logout option is not displayed under Right Column Options
+
+@TC_LP_021 @Login @Logout
+Scenario: User Verify Logging out by selecting Logout option from My Account dropmenu
+Given User open the application using the URL
+When User clicks the My Account dropdown
+When User select Login from the dropdown
+When User enters "Vickymr@gmail.com" email address
+When User enters "1234567890" password
+When User clicks the Login button
+When User clicks the My Account dropdown
+When User select Logout from the dropdown
+When User clicks the My Account dropdown
+When User select Login from the dropdown
+When User enters "Vickymr@gmail.com" email address
+When User enters "1234567890" password
+Then User successfully navigated to Login Page
+
+@TC_LP_022 @Login @Logout
+Scenario: User Verify the Logout Page Title after Logged Out
+Given User open the application using the URL
+When User clicks the My Account dropdown
+When User select Login from the dropdown
+When User enters "Vickymr@gmail.com" email address
+When User enters "1234567890" password
+When User clicks the Login button
+When User clicks the My Account dropdown
+When User select Logout from the dropdown
+Then User verify the Logout page title
   

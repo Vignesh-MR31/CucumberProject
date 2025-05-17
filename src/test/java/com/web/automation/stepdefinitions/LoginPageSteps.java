@@ -8,6 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 import com.web.automation.base.TestContext;
 import com.web.automation.pages.LandingPage;
 import com.web.automation.pages.LoginPage;
+import com.web.automation.utils.CommonHelperMethods;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -175,9 +176,31 @@ public class LoginPageSteps {
 	}
 	
 	@Then("User verify successfully logging out")
-	public void userVerifySuccessfullyLoggingOut() throws InterruptedException {
-		//Thread.sleep(5000);
+	public void userVerifySuccessfullyLoggingOut(){
 		String accountLogoutMessage = "Account Logout";
 		Assert.assertEquals(accountLogoutMessage, loginPage.accountLogoutHeaderElement().getText());
+	}
+	
+	@When("User click the Logout from Right Column options")
+	public void userClickTheLogoutFromRightColumnOptions() {
+	    loginPage.rightOptionLogoutElement().click();
+	}
+	
+	@Then("User verify Logout option is not displayed in dropdown")
+	public void userVerifyLogoutOptionIsNotDisplayedInDropdown() {
+	    boolean status = CommonHelperMethods.isElementPresent(loginPage.logoutOptionElement());
+	    Assert.assertFalse(status);
+	}
+	
+	@Then("User verify Logout option is not displayed under Right Column Options")
+	public void userVerifyLogoutOptionIsNotDisplayedUnderRightColumnOptions() {
+		boolean status = CommonHelperMethods.isElementPresent(loginPage.rightOptionLogoutElement());
+	    Assert.assertFalse(status);
+	}
+	
+	@Then("User verify the Logout page title")
+	public void userVerifyTheLogoutPageTitle() {
+	    String logoutPageTitle = "Account Logout";
+	    Assert.assertEquals(logoutPageTitle, driver.getTitle());
 	}
 }

@@ -74,6 +74,9 @@ public class LoginPage {
 	@FindBy(xpath = "//div[@id='content']/h1")
 	private WebElement accountLogoutHeader;
 	
+	@FindBy(linkText = "Logout")
+	private WebElement rightOptionLogout;
+	
 	public WebElement myAccountElement() {
 		return myAccount;
 	}
@@ -152,5 +155,9 @@ public class LoginPage {
 	
 	public WebElement accountLogoutHeaderElement() {
 		return accountLogoutHeader;
+	}
+	
+	public WebElement rightOptionLogoutElement() {
+		return rightOptionLogout;
 	}
 }
