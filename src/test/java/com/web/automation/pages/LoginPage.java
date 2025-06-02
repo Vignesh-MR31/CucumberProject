@@ -11,7 +11,7 @@ public class LoginPage {
 	
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
-		PageFactory.initElements(driver,this);
+		PageFactory.initElements(this.driver,this);
 	}
 	
 	@FindBy(xpath = "//a[@title='My Account']")
@@ -76,6 +76,9 @@ public class LoginPage {
 	
 	@FindBy(linkText = "Logout")
 	private WebElement rightOptionLogout;
+	
+	@FindBy(xpath = "//div[@id='account-login']/div[1]")
+	private WebElement emailConfirmationMessage;
 	
 	public WebElement myAccountElement() {
 		return myAccount;
@@ -159,5 +162,9 @@ public class LoginPage {
 	
 	public WebElement rightOptionLogoutElement() {
 		return rightOptionLogout;
+	}
+	
+	public WebElement emailConfirmationMessageElement() {
+		return emailConfirmationMessage;
 	}
 }

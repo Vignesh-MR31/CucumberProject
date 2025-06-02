@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
   
 @CucumberOptions(features = "src/test/resources/features",
   				   glue = {"com.web.automation.stepdefinitions","com.web.automation.base"}, 
-  				   tags = "@TC_LP_022",
+  				   tags = "@TC_SP_018",
   				   plugin = {"pretty","html:target/CucumberReport.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
   				   snippets = SnippetType.CAMELCASE,
   				   dryRun = false

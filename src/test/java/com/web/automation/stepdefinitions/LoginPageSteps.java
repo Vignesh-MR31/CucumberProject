@@ -203,4 +203,11 @@ public class LoginPageSteps {
 	    String logoutPageTitle = "Account Logout";
 	    Assert.assertEquals(logoutPageTitle, driver.getTitle());
 	}
+	
+	@Then("User verify the reset password email is sented message is displayed")
+	public void userVerifyTheResetPasswordEmailIsSentedMessageIsDisplayed() {
+		String emailSentedMessage = "An email with a confirmation link has been sent your email address.";
+		CommonHelperMethods.explicitWaitMethod(driver, loginPage.emailConfirmationMessageElement());
+		Assert.assertEquals(emailSentedMessage, loginPage.emailConfirmationMessageElement().getText());
+	}
 }

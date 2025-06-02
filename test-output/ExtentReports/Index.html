@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">May 17, 2025 08:17:37 pm</span></a>
+<a href="#"><span class="badge badge-primary">Jun 2, 2025 06:06:05 pm</span></a>
 </li>
 </ul>
 </div>
@@ -69,7 +69,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@TC_LP_022</a><a class="dropdown-item" href="#">@Login</a><a class="dropdown-item" href="#">@Logout</a>
+<a class="dropdown-item" href="#">@TC_SP_018</a><a class="dropdown-item" href="#">@Search</a>
 </ul>
 </li>
 </ul>
@@ -80,9 +80,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Login Page</p>
+            <p class="name">Search Page</p>
             <p class="text-sm">
-              <span>8:17:38 pm</span> / <span>00:00:05:787</span>
+              <span>6:06:06 pm</span> / <span>00:00:11:423</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -90,10 +90,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Login Page</h5>
-<span class='badge badge-success'>05.17.2025 8:17:38 pm</span>
-<span class='badge badge-danger'>05.17.2025 8:17:43 pm</span>
-<span class='badge badge-default'>00:00:05:787</span>
+<h5 class="test-status text-pass">Search Page</h5>
+<span class='badge badge-success'>06.02.2025 6:06:06 pm</span>
+<span class='badge badge-danger'>06.02.2025 6:06:17 pm</span>
+<span class='badge badge-default'>00:00:11:423</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -106,7 +106,7 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>User Verify the Logout Page Title after Logged Out</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Verify List views when multiple Products is displayed in the search results</div>
       </div>
     </div>
         <div class="collapse">
@@ -116,43 +116,23 @@
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userClicksTheMyAccountDropdown()">
-                <span>When User clicks the My Account dropdown</span>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.SearchPageSteps.userEntersTheProductNameInSearchInputTextBox(java.lang.String)">
+                <span>When User enters the product name "Mac" in search input text box</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userSelectLoginFromTheDropdown()">
-                <span>When User select Login from the dropdown</span>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.SearchPageSteps.userClickTheSearchButton()">
+                <span>When User click the search button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userEntersEmailAddress(java.lang.String)">
-                <span>When User enters "Vickymr@gmail.com" email address</span>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.SearchPageSteps.userClickTheListViewButton()">
+                <span>When User click the list view button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userEntersPassword(java.lang.String)">
-                <span>When User enters "1234567890" password</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userClicksTheLoginButton()">
-                <span>When User clicks the Login button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userClicksTheMyAccountDropdown()">
-                <span>When User clicks the My Account dropdown</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userSelectLogoutFromTheDropdown()">
-                <span>When User select Logout from the dropdown</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.web.automation.stepdefinitions.LoginPageSteps.userVerifyTheLogoutPageTitle()">
-                <span>Then User verify the Logout page title</span>
+              <div class="step pass-bg" title="com.web.automation.stepdefinitions.SearchPageSteps.userVerifyTheSearchedProductIsDisplayedInListView()">
+                <span>Then User verify the searched product is displayed in list view</span>
       <div>
       </div>
               </div>
