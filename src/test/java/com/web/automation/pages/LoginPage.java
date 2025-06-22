@@ -68,7 +68,7 @@ public class LoginPage {
 	@FindBy(linkText = "Forgotten Password")
 	private WebElement forgottenPasswordColumnOption;
 	
-	@FindBy(linkText = "Logout")
+	@FindBy(xpath = "(//ul[contains(@class,'dropdown-menu')])[2]//li[5]")
 	private WebElement logoutOption;
 	
 	@FindBy(xpath = "//div[@id='content']/h1")

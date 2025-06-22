@@ -3,6 +3,7 @@ package com.web.automation.stepdefinitions;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
+import com.web.automation.base.PageInstance;
 import com.web.automation.base.TestContext;
 import com.web.automation.pages.ForgotPasswordPage;
 
@@ -11,22 +12,17 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 
-public class ForgotPasswordPageSteps {
+public class ForgotPasswordPageSteps extends PageInstance{
 	private WebDriver driver;
 	ForgotPasswordPage forgotPasswordPage;
 	
 	public ForgotPasswordPageSteps(TestContext context) {
-		driver = context.driver;
-	}
-	
-	private ForgotPasswordPage forgotPasswordPageDriverInstance() {
-		forgotPasswordPage = new ForgotPasswordPage(driver);
-		return forgotPasswordPage;
+		super(context);
 	}
 	
 	@When("User Enters the existing {string} email address")
 	public void userEntersTheExistingEmailAddress(String email) {
-		forgotPasswordPageDriverInstance();
+		forgotPasswordPage = getForgotPasswordPageInstance();
 		forgotPasswordPage.emailTextBoxElement().sendKeys(email);
 	}
 	
@@ -43,7 +39,7 @@ public class ForgotPasswordPageSteps {
 
 	@Then("User verify the placehold text is displayed in the E-mail address field")
 	public void userVerifyThePlaceholdTextIsDisplayedInTheEMailAddressField() {
-		forgotPasswordPageDriverInstance();
+		forgotPasswordPage = getForgotPasswordPageInstance();
 	    String expectedPlaceholder = "E-Mail Address";
 	    String actualPlaceholder = forgotPasswordPage.emailTextBoxElement().getAttribute("placeholder");
 	    Assert.assertEquals(expectedPlaceholder, actualPlaceholder);

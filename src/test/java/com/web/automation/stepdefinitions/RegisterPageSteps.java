@@ -1,5 +1,7 @@
 package com.web.automation.stepdefinitions;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -7,6 +9,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 //import org.testng.Assert;
 
+import com.web.automation.base.PageInstance;
 import com.web.automation.base.TestContext;
 import com.web.automation.pages.RegisterPage;
 import com.web.automation.utils.CommonHelperMethods;
@@ -15,29 +18,31 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class RegisterPageSteps {
+public class RegisterPageSteps extends PageInstance{
 
 	private WebDriver driver;
 	RegisterPage registerPage;
 	
 	public RegisterPageSteps(TestContext context) {
-		driver = context.driver;
+		super(context);
 	}
 	
-	public RegisterPage registerPageDriverInstance() {
-		registerPage = new RegisterPage(driver);
-		return registerPage;
+	private String generateTimestampForEmail() {
+		   Date date = new Date();  
+		   SimpleDateFormat formatter = new SimpleDateFormat("HHmmss");  
+		   String strDate = formatter.format(date);
+		   return strDate;
 	}
 	
 	@When("User select Register from the dropdown")
 	public void userSelectRegisterFromTheDropdown() {
-		registerPageDriverInstance();
+		registerPage = getRegisterPageInstance();
 		registerPage.registerOptionElement().click();
 	}
 
 	@Then("User successfully navigated to Register Page")
 	public void userSuccessfullyNavigatedToRegisterPage() {
-		registerPageDriverInstance();
+		registerPage = getRegisterPageInstance();
 		String expectedHeader = "Register Account";
 		Assert.assertEquals(expectedHeader, registerPage.registerAccountHeaderWebElement().getText());
 	}
@@ -47,7 +52,14 @@ public class RegisterPageSteps {
 		List<Map<String, String>> registerDetails = dataTable.asMaps();
 		registerPage.firstNameTextBoxWebElement().sendKeys(registerDetails.get(0).get("firstName"));
 		registerPage.lastNameTextBoxWebElement().sendKeys(registerDetails.get(0).get("lastName"));
-		registerPage.emailTextBoxWebElement().sendKeys(registerDetails.get(0).get("email"));
+		String registeredEmail = registerDetails.get(0).get("email").toString();
+		String generatedEmail = registerDetails.get(0).get("email").toString();
+		if(registeredEmail.contains("vickymr")) {
+			registerPage.emailTextBoxWebElement().sendKeys(registerDetails.get(0).get("email"));
+		}
+		else {
+			registerPage.emailTextBoxWebElement().sendKeys("Test"+generateTimestampForEmail()+generatedEmail);
+		}
 		registerPage.telephoneTextBoxWebElement().sendKeys(registerDetails.get(0).get("telephone"));
 		registerPage.passwordTextBoxWebElement().sendKeys(registerDetails.get(0).get("password"));
 		registerPage.passwordConfirmTextBoxWebElement().sendKeys(registerDetails.get(0).get("passwordConfirm"));

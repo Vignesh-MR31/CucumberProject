@@ -2,9 +2,11 @@ package com.web.automation.stepdefinitions;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 //import org.testng.Assert;
 import org.openqa.selenium.interactions.Actions;
 
+import com.web.automation.base.PageInstance;
 import com.web.automation.base.TestContext;
 import com.web.automation.pages.LandingPage;
 import com.web.automation.pages.LoginPage;
@@ -15,7 +17,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class LoginPageSteps {
+public class LoginPageSteps extends PageInstance{
 	
 	private WebDriver driver;
 	LoginPage loginPage;
@@ -23,24 +25,20 @@ public class LoginPageSteps {
 	Actions actions;
 	
 	public LoginPageSteps(TestContext context) {
-		driver = context.driver;
-	}
-	
-	public LoginPage loginPageDriverInstance() {
-		loginPage = new LoginPage(driver);
-		return loginPage;
+		super(context);
+		this.driver = context.driver;
 	}
 	
 	@Given("User open the application using the URL")
 	public void userOpenTheApplicationUsingTheURL() {
-		landingPage = new LandingPage(driver);
+		landingPage = getLandingPageInstance();
 		String expectedFeaturedHeader = "Featured";
 		Assert.assertEquals(expectedFeaturedHeader, landingPage.featuredHeaderElement().getText());
 	}
 	
 	@When("User clicks the My Account dropdown")
 	public void userClicksTheMyAccountDropdown() {
-		loginPageDriverInstance();
+		loginPage = getLoginPageInstance();
 		loginPage.myAccountElement().click();
 	}
 	
@@ -51,7 +49,7 @@ public class LoginPageSteps {
 	
 	@Then("User successfully navigated to Login Page")
 	public void userSuccessfullyNavigatedToLoginPage() {
-		loginPageDriverInstance();
+		loginPage = getLoginPageInstance();
 		String expectedTitle = "Account Login";
 		Assert.assertEquals(expectedTitle, driver.getTitle());
 	}
@@ -74,6 +72,7 @@ public class LoginPageSteps {
 	@Then("User verify the My Account page is displayed")
 	public void userVerifyTheMyAccountPageIsDisplayed() {
 	    String expectedHeader = "My Account";
+	    CommonHelperMethods.explicitWaitMethod(driver, loginPage.myAccountHeaderElement());
 	    Assert.assertEquals(expectedHeader, loginPage.myAccountHeaderElement().getText());
 	}
 

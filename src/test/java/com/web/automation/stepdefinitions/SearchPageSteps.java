@@ -3,6 +3,7 @@ package com.web.automation.stepdefinitions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.web.automation.base.PageInstance;
 import com.web.automation.base.TestContext;
 import com.web.automation.pages.SearchPage;
 import com.web.automation.utils.CommonHelperMethods;
@@ -10,33 +11,31 @@ import com.web.automation.utils.CommonHelperMethods;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import org.junit.Assert;
 
-public class SearchPageSteps {
+public class SearchPageSteps extends PageInstance{
 	
 	private WebDriver driver;
 	public SearchPage searchPage;
 	
 	public SearchPageSteps(TestContext context) {
-		this.driver = context.driver;
-	}
-	
-	private SearchPage searchPageInstance() {
-		searchPage = new SearchPage(driver);
-		return searchPage;
+		super(context);
 	}
 	
 	@When("User enters the product name {string} in search input text box")
 	public void userEntersTheProductNameInSearchInputTextBox(String product) {
-		searchPageInstance();
+		searchPage = getSearchPageInstance();
 	    searchPage.searchInputTextboxWebElement().sendKeys(product);
 	}
 	
 	@When("User click the search button")
 	public void userClickTheSearchButton() {
-		searchPageInstance();
+		searchPage = getSearchPageInstance();
 	    searchPage.searchIconButtonWebElement().click();
 	}
 	
@@ -168,5 +167,49 @@ public class SearchPageSteps {
 			   selectedStatus = false;
 		   }
 		   Assert.assertTrue(selectedStatus);
+	}
+	
+	@When("User clicks the product compare link")
+	public void userClicksTheProductCompareLink() {
+	    searchPage.productCompareLinkWebElement().click();
+	}
+	
+	@Then("User verify the product compare page is displayed")
+	public void userVerifyTheProductComparePageIsDisplayed() {
+	    String expectedHeader = "Product Comparison";
+	    Assert.assertEquals(expectedHeader, searchPage.productComparisonHeaderWebElement().getText());
+	}
+	
+	@When("User select the sort order {int} from the sort dropdown")
+	public void userSelectTheSortOrderFromTheSortDropdown(int sortOrderIndex) {
+	    CommonHelperMethods.selectDropdownByIndex(searchPage.sortOrderDropdownWebElement(), sortOrderIndex);
+	}
+	
+	@Then("User verify the products are sorted based on price low to high")
+	public void userVerifyTheProductsAreSortedBasedOnPriceLowToHigh() {
+	    List<Double> originalPrices = new ArrayList<>();
+	    for(WebElement prices : searchPage.priceListWebElement()) {
+	    	String[] splittedPrice = prices.getText().split("\n");
+	    	originalPrices.add(Double.parseDouble(splittedPrice[0].replaceAll("[$,]", "")));
+	    }
+	    
+	    List<Double> sortedPrices = new ArrayList<>(originalPrices);
+	    Collections.sort(sortedPrices);
+	 
+	    Assert.assertEquals(sortedPrices, originalPrices);
+	}
+	
+	@Then("User verify the products are sorted based on price high to low")
+	public void userVerifyTheProductsAreSortedBasedOnPriceHighToLow() {
+		List<Double> originalPrices = new ArrayList<>();
+	    for(WebElement prices : searchPage.priceListWebElement()) {
+	    	String[] splittedPrice = prices.getText().split("\n");
+	    	originalPrices.add(Double.parseDouble(splittedPrice[0].replaceAll("[$,]", "")));
+	    }
+	    
+	    List<Double> sortedPrices = new ArrayList<>(originalPrices);
+	    sortedPrices.sort(Collections.reverseOrder());
+	    
+	    Assert.assertEquals(sortedPrices, originalPrices);
 	}
 }

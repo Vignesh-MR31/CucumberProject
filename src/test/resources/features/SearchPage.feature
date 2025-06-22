@@ -152,3 +152,27 @@ When User enters the product name "Mac" in search input text box
 When User click the search button
 When User click the list view button
 Then User verify the searched product is displayed in list view
+
+@TC_SP_019 @Search
+Scenario: Verify navigating to Product Compare Page from Search Results page
+Given User open the application using the URL
+When User enters the product name "iMac" in search input text box
+When User click the search button
+When User clicks the product compare link
+Then User verify the product compare page is displayed
+
+@TC_SP_020 @Search
+Scenario: Verify User is able to sort the Products in price Low to High displayed in the Search Results
+Given User open the application using the URL
+When User enters the product name "Mac" in search input text box
+When User click the search button
+When User select the sort order 3 from the sort dropdown
+Then User verify the products are sorted based on price low to high
+
+@TC_SP_021 @Search
+Scenario: Verify User is able to sort the Products in price High to Low displayed in the Search Results
+Given User open the application using the URL
+When User enters the product name "Mac" in search input text box
+When User click the search button
+When User select the sort order 4 from the sort dropdown
+Then User verify the products are sorted based on price high to low

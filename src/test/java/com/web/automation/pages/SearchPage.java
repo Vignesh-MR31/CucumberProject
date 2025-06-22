@@ -58,6 +58,21 @@ public class SearchPage {
 	@FindBy(id = "grid-view")
 	private WebElement gridViewButton;
 	
+	@FindBy(id = "compare-total")
+	private WebElement productCompareLink;
+	
+	@FindBy(xpath = "//div[@id='content']/h1")
+	private WebElement productComparisonHeader;
+	
+	@FindBy(id = "input-sort")
+	private WebElement sortOrderDropdown;
+	
+	@FindBy(xpath = "//div[@class='caption']//p[2]")
+	private List<WebElement> priceList;
+	
+	@FindBy(xpath = "//button[@data-original-title='Compare this Product']")
+	private WebElement compareThisProductIcon;
+	
 	public WebElement searchInputTextboxWebElement() {
 		return searchInputTextbox;
 	}
@@ -112,5 +127,25 @@ public class SearchPage {
 	
 	public WebElement gridViewButtonWebElement() {
 		return gridViewButton;
+	}
+	
+	public WebElement productCompareLinkWebElement() {
+		return productCompareLink;
+	}
+	
+	public WebElement productComparisonHeaderWebElement() {
+		return productComparisonHeader;
+	}
+	
+	public WebElement sortOrderDropdownWebElement() {
+		return sortOrderDropdown;
+	}
+	
+	public List<WebElement> priceListWebElement() {
+		return priceList;
+	}
+	
+	public WebElement compareThisProductIconWebElement() {
+		return compareThisProductIcon;
 	}
 }

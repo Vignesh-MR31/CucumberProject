@@ -14,7 +14,7 @@ When User clicks the My Account dropdown
 When User select Register from the dropdown
 When User enters the personal details and passwords
 |firstName|lastName   |email           |telephone |password |passwordConfirm|
-|vicky		|M R        |vicky@1gmail.com|1234567890|1234567  |1234567				|
+|vicky		|M R        |@gmail.com|1234567890|1234567  |1234567				|
 When User selects subscribe radio button as "yes"
 When User selects privacy policy checkbox
 When User clicks continue button
@@ -43,8 +43,8 @@ Then User verify the account is successfully registered
 
 Examples:
 |firstName|lastName   |email           		|telephone |password |passwordConfirm|
-|Tester   |one        |TesterOne@gmail.com|1234567890|123456789|123456789      |
-|Tester   |two        |TesterTwo@gmail.com|2234567890|223456789|223456789      |
+|Tester   |one        |@gmail.com|1234567890|123456789|123456789      |
+|Tester   |two        |@gmail.com|2234567890|223456789|223456789      |
 
 @TC_RP_005 @Register
 Scenario: Register the already registered user
@@ -53,7 +53,7 @@ When User clicks the My Account dropdown
 When User select Register from the dropdown
 When User enters the personal details and passwords
 |firstName|lastName   |email           |telephone |password |passwordConfirm|
-|vicky		|M R        |vicky@1gmail.com|1234567890|1234567  |1234567				|
+|vicky		|M R        |vickymr@gmail.com|1234567890|1234567  |1234567				|
 When User selects subscribe radio button as "yes"
 When User selects privacy policy checkbox
 When User clicks continue button
@@ -66,7 +66,7 @@ When User clicks the My Account dropdown
 When User select Register from the dropdown
 When User enters the personal details and passwords
 |firstName|lastName   |email           |telephone |password |passwordConfirm|
-|vicky		|R          |vicky@2gmail.com|1234567890|1234567  |1234567				|
+|vicky		|R          |@gmail.com|1234567890|1234567  |1234567				|
 When User selects subscribe radio button as "no"
 When User selects privacy policy checkbox
 When User clicks continue button
@@ -112,7 +112,7 @@ When User clicks the My Account dropdown
 When User select Register from the dropdown
 When User enters the personal details and passwords
 |firstName|lastName   |email           |telephone |password |passwordConfirm|
-|vicky		|R          |vicky@2gmail.com|1234567890|1234567  |1234567				|
+|vicky		|R          |@gmail.com|1234567890|1234567  |1234567				|
 When User selects subscribe radio button as "no"
 When User clicks continue button
 Then User verify the warning message displayed when registering the account without selecting the Privacy Policy checkbox
@@ -149,7 +149,7 @@ When User clicks the My Account dropdown
 When User select Register from the dropdown
 When User enters the personal details and passwords
 |firstName|lastName   |email           |telephone |password |passwordConfirm|
-|vicky		|R          |vickyR@gmail.com |1234567890|1234567  |7654321 				|
+|vicky		|R          |@gmail.com |1234567890|1234567  |7654321 				|
 When User selects subscribe radio button as "yes"
 When User selects privacy policy checkbox
 When User clicks continue button
