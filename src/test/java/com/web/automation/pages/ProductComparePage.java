@@ -1,5 +1,7 @@
 package com.web.automation.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,6 +40,33 @@ public class ProductComparePage {
 	@FindBy(xpath = "//div[@class='caption']/h4")
 	private WebElement relatedProductsHeader;
 	
+	@FindBy(linkText = "Product Compare (0)")
+	private WebElement productCompareLink;
+	
+	@FindBy(xpath = "//div[@id='content']/p")
+	private WebElement noProductMessage;
+	
+	@FindBy(linkText = "Continue")
+	private WebElement continueButton;
+	
+	@FindBy(xpath = "(//div[@id='product-compare']/ul/li)[1]//i")
+	private WebElement homeIconBreadcrumb;
+	
+	@FindBy(xpath = "//input[@value='Add to Cart']")
+	private WebElement addToCartButton;
+	
+	@FindBy(linkText = "Remove")
+	private WebElement removeButton;
+	
+	@FindBy(xpath = "(//td[contains(text(),'Product')])[1]/following-sibling::td")
+	private List<WebElement> addedProducts;
+	
+	@FindBy(xpath = "//div[contains(@class,'alert')]")
+	private WebElement addToCartSuccessMessage;
+	
+	@FindBy(xpath = "//div[contains(@class,'alert')]")
+	private WebElement removeSuccessMessage;
+	
 	public WebElement searchedProductImageWebElement() {
 		return searchedProductImage;
 	}
@@ -68,5 +97,41 @@ public class ProductComparePage {
 	
 	public WebElement relatedProductsHeaderWebElement() {
 		return relatedProductsHeader;
+	}
+	
+	public WebElement productCompareLinkWebElement() {
+		return productCompareLink;
+	}
+	
+	public WebElement noProductMessageWebElement() {
+		return noProductMessage;
+	}
+	
+	public WebElement continueButtonWebElement() {
+		return continueButton;
+	}
+	
+	public WebElement homeIconBreadcrumbWebElement() {
+		return homeIconBreadcrumb;
+	}
+	
+	public WebElement addToCartButtonWebElement() {
+		return addToCartButton;
+	}
+	
+	public WebElement removeButtonWebElement() {
+		return removeButton;
+	}
+	
+	public List<WebElement> addedProductsWebElement() {
+		return addedProducts;
+	}
+	
+	public WebElement addToCartSuccessMessageWebElement() {
+		return addToCartSuccessMessage;
+	}
+	
+	public WebElement removeSuccessMessageWebElement() {
+		return removeSuccessMessage;
 	}
 }

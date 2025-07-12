@@ -6,6 +6,7 @@ import com.web.automation.pages.ForgotPasswordPage;
 import com.web.automation.pages.LandingPage;
 import com.web.automation.pages.LoginPage;
 import com.web.automation.pages.ProductComparePage;
+import com.web.automation.pages.ProductDisplayPage;
 import com.web.automation.pages.RegisterPage;
 import com.web.automation.pages.SearchPage;
 
@@ -18,6 +19,7 @@ public class PageInstance {
 	private SearchPage searchPage;
 	private ProductComparePage productComparePage;
 	private ForgotPasswordPage forgotPasswordPage;
+	private ProductDisplayPage productDisplayPage;
 
     public PageInstance(TestContext context) {
         this.driver = context.driver;
@@ -63,5 +65,12 @@ public class PageInstance {
         	forgotPasswordPage = new ForgotPasswordPage(driver);
         }
         return forgotPasswordPage;
+    }
+    
+    public ProductDisplayPage getProductDisplayPageInstance() {
+        if (productDisplayPage == null) {
+        	productDisplayPage = new ProductDisplayPage(driver);
+        }
+        return productDisplayPage;
     }
 }

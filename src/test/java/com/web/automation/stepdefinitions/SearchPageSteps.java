@@ -30,7 +30,13 @@ public class SearchPageSteps extends PageInstance{
 	@When("User enters the product name {string} in search input text box")
 	public void userEntersTheProductNameInSearchInputTextBox(String product) {
 		searchPage = getSearchPageInstance();
-	    searchPage.searchInputTextboxWebElement().sendKeys(product);
+		if(searchPage.searchInputTextboxWebElement().getText()!=null) {
+			searchPage.searchInputTextboxWebElement().clear();
+			searchPage.searchInputTextboxWebElement().sendKeys(product);
+		}
+		else {
+			searchPage.searchInputTextboxWebElement().sendKeys(product);
+		}
 	}
 	
 	@When("User click the search button")
